@@ -1,0 +1,131 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body{
+    background:linear-gradient(#05285D,#9E9FA0);
+    
+}
+a:link,a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+a:hover,a:active{
+    text-decoration: underline;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+    
+}
+.left{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around ;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+    height: 100px;
+}
+.leftbox{
+    display: flex;
+    flex-direction: row;
+}
+.textare{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left p {
+    color:white;
+    font-style: italic;
+    font-weight:lighter;
+}
+.rightbox{
+    display: flex;
+    flex-direction: row;
+}
+.menu{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+.menubar{
+    margin-right: auto;
+    margin-left: 20px;
+    padding: 10px;
+    
+}
+.menubar i{
+    width: 25px;
+    height: 20px;
+}
+.para{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 20px;
+    padding:10px;
+    font-size: 30px;
+    color: white;
+}
+.linemidd{
+    border: 1px solid white;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 250px;
+    background: rgb(217,217,217);
+    background: linear-gradient(90deg, rgba(217,217,217,1) 0%, rgba(115,115,115,1) 54%);
+    margin: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    gap: 20px;
+}
+.box p{
+    font-style: italic;
+    font-size: 20px;
+
+}
+.box label{
+    font-size: 18px;
+}
+.box input{
+    background-color: azure;
+    border-radius: 5px;
+}
+.box button{
+    display: flex;
+    margin: 20px;
+    padding: 4px;
+    border-radius: 10px;
+    color:black;
+    justify-content: center;
+    align-items: center;
+}
+.sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}

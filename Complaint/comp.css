@@ -1,0 +1,246 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body{
+    background:linear-gradient(#05285D,#9E9FA0);
+    
+}
+a:link,a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+a:hover,a:active{
+    text-decoration: underline;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+    
+}
+.left{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around ;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+    height: 100px;
+}
+.leftbox{
+    display: flex;
+    flex-direction: row;
+}
+.textare{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left p {
+    color:white;
+    font-style: italic;
+    font-weight:lighter;
+}
+.rightbox{
+    display: flex;
+    flex-direction: row;
+}
+.menu{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+.menubar{
+    margin-right: auto;
+    margin-left: 20px;
+    padding: 10px;
+    
+}
+.menubar i{
+    width: 25px;
+    height: 20px;
+}
+.para{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 20px;
+    padding:10px;
+    font-size: 30px;
+    color: white;
+}
+.linemidd{
+    border: 10px solid white;
+}
+.daad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.FullForm {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    background: rgb(72,92,144);
+    background: linear-gradient(90deg, rgba(72,92,144,1) 0%, rgba(58,81,141,1) 54%, rgba(67,106,204,1) 100%);
+}
+
+.child {
+    width: 50%; /* Adjust width as needed */
+    min-width: 300px; /* Prevent it from being too small */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.child textarea{
+    width: 450px;
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 15px;
+}
+.box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.box1 form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box1 input{
+    width: 160px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: none;
+    
+}
+.box1 select{
+    width: 160px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: none;
+
+}
+.box1 .new1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.box1 .new2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.box1 .new2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}.box1 .new3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.child button{
+    position: relative;
+    left: 200px;
+    color: black;
+    background-color: red;
+    cursor: pointer;
+}
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.box2 form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+.box2 .kew1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.box2 .kew2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.box2 select{
+    width: 160px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: none;
+
+}
+.box2 input{
+    width: 160px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: none;
+}
+.secondla{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.secondla input{
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+
+.last{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    
+}
+.last input{
+    background-color: rgb(6, 145, 133);
+}
