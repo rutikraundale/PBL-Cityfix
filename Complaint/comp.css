@@ -86,161 +86,59 @@ a:hover,a:active{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
 }
-.FullForm {
-    width: 80vw;
     height: 100vh;
+    max-height: 100%;
     display: flex;
-    border-radius: 40px;
-    align-items: center;
     justify-content: center;
     background: rgb(72,92,144);
-    background: linear-gradient(90deg, rgba(72,92,144,1) 0%, rgba(58,81,141,1) 54%, rgba(67,106,204,1) 100%);
 }
-
-.child {
-    width: 50%; /* Adjust width as needed */
-    min-width: 300px; /* Prevent it from being too small */
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px; /* Adds rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
-    
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
 }
-.child textarea{
-    width: 450px;
-    height: 100px;
-    display: flex;
-    align-items: flex-start;
-    border-radius: 15px;
 }
 .box1{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+    padding:5px;
+    gap: 40px;
 }
-.box1 form{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
 }
-
-.box1 input{
-    width: 160px;
-    height: 20px;
-    border-radius: 5px;
-    box-shadow: none;
-    
+    display: flex;
 }
-.box1 select{
-    width: 160px;
-    height: 20px;
-    border-radius: 5px;
-    box-shadow: none;
-
+    display: flex;
+    align-items: center;
 }
-.box1 .new1{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.box1 .new2{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
 }
-.box1 .new2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}.box1 .new3{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.child button{
-    position: relative;
-    left: 200px;
     color: black;
-    background-color: red;
-    cursor: pointer;
 }
-.box2{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 10px;
 }
-.box2 form{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
-
 }
-.box2 .kew1{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+    display: flex;
+    flex-direction: row;
     gap: 10px;
 }
-.box2 .kew2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-.box2 select{
-    width: 160px;
     height: 20px;
+}
     border-radius: 5px;
-    box-shadow: none;
-
 }
-.box2 input{
-    width: 160px;
-    height: 20px;
-    border-radius: 5px;
-    box-shadow: none;
 }
-.secondla{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    
 }
-.secondla input{
-    background-color:rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-
-.last{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    
-}
-.last input{
-    background-color: rgb(6, 145, 133);
 }
