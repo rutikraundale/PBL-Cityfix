@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feed.css">
+</head>
+<body>
+
+    <nav>
+        <div class="navlink">
+            <a href="#">Feedback</a>
+            <a href="#">FAQS</a>
+            <a href="#">Login</a>
+        </div>
+            
+        <div class="left">
+            <div class="leftbox">
+                <div class="leimg">
+                    <img id="logo" src="logo.png" alt="Logo" width="90">
+                </div>
+                    <div class="textare">
+                        <p>Cityfix</p>
+                        <p>Solving Urban Challenges</p>
+                    </div>
+                    </div>
+            <div class="rightbox">
+                        
+                <form action="#">
+                    <input type="search" id="query" placeholder="Search here....">
+                    <button>Go</button>
+                </form>
+            </div>
+                        
+                        
+        </div>
+    </nav>
+
+    <div class="pagelink">
+        <div class="nav">
+            <a id="a1" href="#">Home</a>
+            <a id="a2" href="#">About Us</a>
+            <a id="a3" href="#">Contact Us</a>
+            <a id="a4" href="#">Activities</a>
+        </div>
+
+        <div class="Login">
+            <button>Login/Register</button>
+        </div>
+    </div>
+    <hr id="linemidd">
+    <!-- NAVIGATION COMPLETE -->
+    <div class="container">
+        <div class="container1">
+            <div class="para1">
+                <p id="para1">Complete the below form to send us your complaint and suggestion. Your complaint and suggestions will be very much appreciated. If you provide us with your contact information, we will be able to answer your questions.</p>
+
+            </div>
+            <form action="#">
+                
+                <div class="box1">
+                    <label for="name">Name*:</label>
+                <input type="text" name="name" id="name">
+                <label for="mobile">Mobile No*</label>
+                <input type="tel" pattern="[0-9]{10}" maxlength="10" required>
+                </div>
+                <div class="box2">
+                    <label for="email" name="Email">Email Id*</label>
+                <input type="email"name="email" id="email">
+                <label for="category">Select Type*</label>
+                <select name="comp" id="comp">
+                    <option value="other">Others</option>
+                    <option value="complain">Complain</option>
+                    <option value="sugges">Suggestions</option>
+                </select>
+                </div>
+                
+                <p id="para2">Message*</p>
+
+                <textarea name="text" id="prob" rows="10" cols="30"></textarea>
+                <div class="last">
+                    <button>Submit</button>
+                    <button>Reset</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
