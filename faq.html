@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityFix - FAQ</title>
+    <link rel="stylesheet" href="faq.css">
+    
+</head>
+<body>
+
+    <nav>
+        <div class="navlink">
+            <a href="#">Feedback</a>
+            <a href="#">FAQS</a>
+            <a href="#">Login</a>
+        </div>
+            
+        <div class="left">
+            <div class="leftbox">
+                <div class="leimg">
+                    <img id="logo" src="logo.png" alt="Logo" width="90">
+                </div>
+                    <div class="textare">
+                        <p>Cityfix</p>
+                        <p>Solving Urban Challenges</p>
+                    </div>
+                    </div>
+            <div class="rightbox">
+                        
+                <form action="#">
+                    <input type="search" id="query" placeholder="Search here....">
+                    <button>Go</button>
+                </form>
+            </div>
+                        
+                        
+        </div>
+    </nav>
+
+
+    <div class="pagelink">
+        <div class="nav">
+            <a id="a1" href="#">Home</a>
+            <a id="a2" href="#">About Us</a>
+            <a id="a3" href="#">Contact Us</a>
+            <a id="a4" href="#">Activities</a>
+        </div>
+
+        <div class="Login">
+            <button>Login/Register</button>
+        </div>
+    </div>
+    <hr id="linemidd">
+
+
+
+    <!-- NAVIGATION -->
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq">
+            <div class="question">1. What is CityFix? <span class="icon">+</span></div>
+            <div class="answer">CityFix is a platform where users can register complaints about daily societal issues like potholes, sewage problems, and traffic concerns and track their status.</div>
+        </div>
+        
+        <div class="faq">
+            <div class="question">2. How do I register a complaint? <span class="icon">+</span></div>
+            <div class="answer">You can register a complaint by signing up on CityFix, providing the issue details, and submitting the complaint. You will receive a tracking ID for updates.</div>
+        </div>
+        
+        <div class="faq">
+            <div class="question">3. Can I track my complaint status? <span class="icon">+</span></div>
+            <div class="answer">Yes, CityFix allows users to track the status of their complaints using their unique tracking ID.</div>
+        </div>
+        
+        <div class="faq">
+            <div class="question">4. Is CityFix available for all cities? <span class="icon">+</span></div>
+            <div class="answer">Currently, CityFix is being implemented in selected cities. We aim to expand our services to more locations in the future.</div>
+        </div>
+        
+        <div class="faq">
+            <div class="question">5. Is there a mobile app for CityFix? <span class="icon">+</span></div>
+            <div class="answer">As of now, CityFix is accessible via a web platform. A mobile app is under development and will be launched soon.</div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.icon');
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                } else {
+                    document.querySelectorAll('.answer').forEach(ans => ans.style.display = 'none');
+                    document.querySelectorAll('.icon').forEach(ic => ic.textContent = '+');
+                    answer.style.display = 'block';
+                    icon.textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
