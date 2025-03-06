@@ -54,7 +54,7 @@ a:hover,a:active{
 }
 .rightbox input{
     height: 30px;
-    border-radius: 6px;
+    border-radius: 25px;
     background-color:white;
     margin: 5px;
     padding: 5px;
@@ -62,10 +62,15 @@ a:hover,a:active{
 }
 input::placeholder{
     color: rgb(0, 0, 0);
+    margin: 10px;
 }
 .rightbox input:hover{
     background-color:transparent;
     color:white;
+
+}
+input:hover::placeholder{
+    color: white;
 }
 .rightbox button{
     height: 25px;
@@ -174,54 +179,28 @@ input::placeholder{
     gap: 0px;
     transition: 0.3s;
 }
+#box1{
+    width: 200px;
+    height: 70px;
+    border-radius: 20px;
+    background: rgb(8,29,44);
+    background: linear-gradient(90deg, rgba(8,29,44,1) 42%, rgba(14,51,75,1) 85%, rgba(27,63,89,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: background 0.5s ease-in-out, transform 0.3s ease;
 
-.boxes #box1{
-    width: 200px;
-    height: 70px;
-    border-radius: 20px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,71,82,1) 87%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    
 }
-.boxes #box2{
-    width: 200px;
-    height: 70px;
-    border-radius: 20px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,71,82,1) 87%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+.boxes #box1:hover{
+    background: rgb(190,202,210);
+    background: linear-gradient(90deg, rgba(190,202,210,1) 38%, rgba(186,194,200,1) 73%, rgba(255,255,255,1) 92%);
+    color: black;
+    transform: scale(1.05);
+    text-decoration: none;
 }
-.boxes #box3{
-    width: 200px;
-    height: 70px;
-    border-radius: 20px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,71,82,1) 87%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    
-}
-.boxes #box4{
-    width: 200px;
-    height: 70px;
-    border-radius: 20px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,71,82,1) 87%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    
-}
+
 
 .uselink{
     width:100%;
@@ -233,8 +212,6 @@ input::placeholder{
     flex-direction: column;
     align-items:flex-start;
     justify-content:space-evenly;
-    gap: 10px;
-
     
 }
 .uselink p{
@@ -256,17 +233,72 @@ input::placeholder{
 .uselink ul a:hover{
     background-color: #102340;
     border-radius: 20px;
-
-    
-
-
+    text-decoration: none;
 }
 .footer{
     display: flex;
     flex-direction: row;
+    height: fit-content;
     justify-content: space-around;
+    background: rgb(7,33,51);
+    background: linear-gradient(90deg, rgba(7,33,51,1) 42%, rgba(11,59,91,1) 100%);
 }
-.footer img{
+.Address{
+    display: flex;
+    flex-direction: column;
+    
+}
+.Address p{
+    font-size:20px;
+    margin: 10px;
+    padding: 10px;
+    font-style:normal;
+    color: white;
+    position: relative;
+    left:-30px ;
+}
+    
+#img1{
     width: 90px;
-    height: 85px;
+    height: 87px;
+}
+#img2{
+    width: 100px;
+    height: 90px;
+}
+.leftimg{
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0077b5; /* LinkedIn Blue */
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    font-style: italic;
+}
+
+/* Icon styling */
+.linkedin-link i {
+    font-size: 20px;
+    margin-right: 8px; /* Space between icon and text */
+    transition: color 0.3s ;
+}
+
+/* Hover effect: change color */
+.linkedin-link:hover {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+
+.linkedin-link:hover i {
+    color: #004471;
 }
