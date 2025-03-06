@@ -12,12 +12,12 @@ body{
 a:link,a:visited{
     color: white;
     text-decoration: none;
-    
     padding: 10px;
    
 }
 a:hover,a:active{
     text-decoration: underline;
+    
 }
 .navlink{
     display: flex;
@@ -55,14 +55,23 @@ a:hover,a:active{
 .rightbox input{
     height: 30px;
     border-radius: 6px;
-    margin: 10px;
-    padding: 10px;
-    color: azure;
+    background-color:white;
+    margin: 5px;
+    padding: 5px;
+    color:black;
+}
+input::placeholder{
+    color: rgb(0, 0, 0);
+}
+.rightbox input:hover{
+    background-color:transparent;
+    color:white;
 }
 .rightbox button{
     height: 25px;
     width: 35px;
     background-color:white;
+
 }
 
 .left p {
@@ -106,20 +115,23 @@ a:hover,a:active{
     margin-top: 30px;
     
 }
-.Login button{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 
 .linemidd{
     border: 10px solid white;
 }
 .Login button {
     background-color: white;
-    border-radius: 20px;
-    font-size: 15px;
-    padding: 10px;
+    border-radius: 18px;
+    font-size: 14px;
+    padding: 0,10px;
     cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.3s;
+}
+.Login button:hover{
+    background-color: black;
+    color: white;
+    text-decoration:wavy;
 }
 .middletext{
     width: 100%;
@@ -130,7 +142,6 @@ a:hover,a:active{
     align-items: center;
     color: white;
     font-size:x-large;
-    
     font-style: normal;
     grid:5px;
 }
@@ -163,8 +174,6 @@ a:hover,a:active{
     gap: 0px;
     transition: 0.3s;
 }
-
-
 
 .boxes #box1{
     width: 200px;
@@ -213,8 +222,9 @@ a:hover,a:active{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     
 }
+
 .uselink{
-    width: 200px;
+    width:100%;
     list-style: none;
     display: flex;
     margin: 10px;
@@ -222,7 +232,7 @@ a:hover,a:active{
     padding: 10px;
     flex-direction: column;
     align-items:flex-start;
-    justify-content: center;
+    justify-content:space-evenly;
     gap: 10px;
 
     
@@ -232,17 +242,24 @@ a:hover,a:active{
     margin: 10px;
     padding: 10px;
     
-    
 }
 .uselink ul{
     list-style: none;
     display: flex;
    
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
     justify-content: center;
     align-items: center;
+    transition:0.4s;
+}
+.uselink ul a:hover{
+    background-color: #102340;
+    border-radius: 20px;
+
     
+
+
 }
 .footer{
     display: flex;
