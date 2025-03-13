@@ -34,7 +34,8 @@ a:active {
     position: relative;
     bottom: -5px;
 }
-@media (max-width:480px){
+
+@media (max-width:480px) {
     .navlink {
         display: flex;
         flex-direction: row;
@@ -45,6 +46,7 @@ a:active {
         gap: 3px;
     }
 }
+
 /* ENDS */
 
 /* LOGO AND QUERY STARTS */
@@ -103,16 +105,19 @@ a:active {
     margin: 10px;
     padding: 10px;
     color: azure;
-    border-color:white ;
+    border-color: white;
 }
-.rightbox input::placeholder{
+
+.rightbox input::placeholder {
     color: black;
 }
-.rightbox input:hover{
+
+.rightbox input:hover {
     background: transparent;
 }
-.rightbox input:hover::placeholder{
-    color:white;
+
+.rightbox input:hover::placeholder {
+    color: white;
 }
 
 .rightbox button {
@@ -139,7 +144,8 @@ a:active {
     margin-left: auto;
     margin-right: auto;
 }
-@media (max-width:480px){
+
+@media (max-width:480px) {
     #logo {
         width: 80px;
         height: 80px;
@@ -149,19 +155,21 @@ a:active {
         margin-left: auto;
         margin-right: auto;
     }
+
     #city {
         position: relative;
         top: 6px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size:medium;
+        font-size: medium;
     }
-    
+
     #Solve {
         font-style: normal;
         position: relative;
-        top:-22px;
+        top: -22px;
         font-size: smaller;
     }
+
     .rightbox input {
         height: 25px;
         width: 100px;
@@ -169,9 +177,10 @@ a:active {
         margin: 10px;
         padding: 6px;
         color: azure;
-        border-color:white ;
+        border-color: white;
 
     }
+
     .rightbox button {
         height: 25px;
         width: 32px;
@@ -240,7 +249,7 @@ a:active {
 
 
 #linemidd {
-    border: 1px solid hsl(0, 0%, 100%);
+    border: 1px solid white;
     width: 78%;
 }
 
@@ -261,79 +270,70 @@ a:active {
         height: 30px;
         cursor: pointer;
     }
+
+    /* NAVIGATION ENDS */
+
 }
-.container {
+/* SIGN UP FORM */
+.container{
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#05285D, #9E9FA0);
+    background:transparent;
 }
-
-.container1 {
-    width: 70%;
-    height: 70vh;
+.child{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    position: relative;
     align-items: center;
-    border-radius: 20px;
     background: white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 50%;
+    height: 70%;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.child p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
 
 }
 
-.container1 form {
-    position: absolute;
-}
-
-.container1 .para1 {
+.formdiv{
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: black;
+    flex-direction:column;
+    gap: 17px;
+}
+
+.formdiv input{
+    border: none;
+    border-bottom: 2px solid rgb(0, 255, 89);
+    outline: none;
+    width: 200px;
+    
+    padding: 5px;
     font-style: italic;
-    position: absolute;
-    top: 0px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background: rgb(37, 111, 171);
-    background: linear-gradient(90deg, rgba(37, 111, 171, 1) 26%, rgba(40, 173, 190, 1) 70%);
 }
-
-.container1 #para2 {
-    color: black;
-    font-style: normal;
-    margin: 3px;
-
-}
-
-.formcontainer {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 4px;
+.formdiv input:focus {
+    outline: none; /* Ensures no border/outline appears on click */
+    box-shadow: none; /* Removes any shadow effect */
+    border-bottom: 2px solid rgb(3, 255, 83);
+  }
+#button{
     position: relative;
-    top: 40px;
-
-}
-
-.formcontainer .butt {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: 10px;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-
-}
-
+    top: 50px;
+    left: 20px;
+    width: 150px;
+    height: 40px;
+    border: 2px;
+    color:black;
+    border-color:white;
+    background: rgb(41,136,176);
+    background: linear-gradient(90deg, rgba(41,136,176,1) 19%, rgba(0,255,243,1) 100%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}   
+/* FOOTER SECTION */
 .footer {
     height: 100vh;
     display: flex;

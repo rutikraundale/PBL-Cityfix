@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100vh;
     overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
@@ -59,6 +60,7 @@ a:hover,a:active{
     margin: 5px;
     padding: 5px;
     color:black;
+    transition: 0.5s;
 }
 input::placeholder{
     color: rgb(0, 0, 0);
@@ -112,32 +114,70 @@ input:hover::placeholder{
     
     
 }
-
-.Login {
-    display: flex;
-    justify-content: flex-end; /* Ensures button stays on the right */
-    flex-grow: 0; /* Prevents it from growing */
-    margin-top: 30px;
-    
-}
-
 .linemidd{
     border: 10px solid white;
 }
+.Login {
+    display: flex;
+    justify-content: flex-end; /* Ensures button stays on the right */
+    margin-top: 30px;
+}
+#vline{
+    position: relative;
+    bottom: -4px;
+}
+
 .Login button {
-    background-color: white;
-    border-radius: 18px;
-    font-size: 14px;
-    padding: 0,10px;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8); /* Soft gradient */
+    border: 2px solid #000; /* Black border for definition */
+    border-radius: 25px; /* More rounded for a modern look */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 18px;
     cursor: pointer;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    color: black;
+    text-transform: uppercase;
 }
-.Login button:hover{
-    background-color: black;
+
+.Login button:hover {
+    background: linear-gradient(135deg, #000000, #444444); /* Dark gradient */
     color: white;
-    text-decoration:wavy;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    text-decoration: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}.Login {
+    display: flex;
+    justify-content: flex-end; /* Ensures button stays on the right */
+    margin-top: 30px;
 }
+
+.Login button {
+    background: linear-gradient(135deg, #ffffff, #f8f8f8); /* Soft gradient */
+    border: none; /* No border for a clean look */
+    border-radius: 25px; /* More rounded for a modern look */
+    font-size: 14px;
+    font-weight: 500; /* Lighter font weight */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    color: #666; /* Lighter text */
+    text-transform: uppercase;
+}
+
+.Login button:hover {
+    background: linear-gradient(135deg, #000000, #444444); /* Dark gradient */
+    color: #f0f0f0; /* Soft white text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    text-decoration: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+
 .middletext{
     width: 100%;
     margin: 20px;
@@ -172,11 +212,12 @@ input:hover::placeholder{
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     margin: 10px;
     padding: 10px;
-    gap: 0px;
+    gap: 10px;
     transition: 0.3s;
 }
 #box1{
@@ -236,6 +277,7 @@ input:hover::placeholder{
     text-decoration: none;
 }
 .footer{
+    height: 100vh;
     display: flex;
     flex-direction: row;
     height: fit-content;

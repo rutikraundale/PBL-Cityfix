@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Sign-In</title>
+    <link rel="stylesheet" href="sign.css">
     <script src="https://kit.fontawesome.com/14839cd535.js" crossorigin="anonymous"></script>
 </head>
 
@@ -55,42 +55,35 @@
         </div>
     </div>
     <hr id="linemidd">
+    <!-- NAVIGATION ENDS -->
 
-    <div class="container">
-        <div class="container1">
-            <div class="login1">
-                <h4>Login</h1>
-            </div>
-            <form action="#" div="position">
-                <div class="user">
-
-                    <input type="email" id="username" placeholder="Username">
-                    <i class="fa-solid fa-user"></i>
-
+    <!-- SIGN UP FORM  -->
+     <div class="container">
+        <div class="child">
+            <p>Registration Form</p>
+            <form action="#">
+                <div class="formdiv">
+                    <label for="user"></label>
+                <input type="text" name="user" id="user" placeholder="* Name" required>
+                
+                <label for="Email"></label>
+                <input type="email" id="Email" placeholder="* Email address" required>
+                
+                <label for="phone"></label>
+                <input type="tel" id="phone" pattern="[0-9]{10}" maxlength="10" placeholder="* Phone">
+                
+                <label for="pass"></label>
+                <input type="password" id="pass" placeholder="* Password" required>
+                
+                <label for="cpass"></label>
+                <input type="password" id="cpass" placeholder="* Confirm Password" required>
+                
                 </div>
-                <div class="password">
-
-                    <input type="password" id="pass" placeholder="Password">
-                    <i class="fa-solid fa-lock"></i>
-                </div>
-                <div class="box1">
-                    <input type="checkbox">
-                    <h5>Remember Me</h5>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <div class="box2">
-                    <button>Login</button>
-                </div>
-                <div class="box3">
-                    <p>Don't have account?</p>
-                    <a href="#">Sign Up</a>
-                </div>
-
+                <button id="button">CREATE ACCOUNT</button>
             </form>
-
-
         </div>
-    </div>
+     </div>
+     <!-- FOOTER SECTIION -->
     <footer>
         <div class="footer">
             <div class="Address">
@@ -123,6 +116,9 @@
 
         </div>
     </footer>
+    <!-- FOOTER SECTION -->
+
 
 </body>
+
 </html>
