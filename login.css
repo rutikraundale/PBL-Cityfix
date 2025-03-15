@@ -1,14 +1,10 @@
 body {
+    width: fit-content;
+    height: fit-content;
     margin: 0;
     padding: 0;
-    width: 100%;
     overflow-x: hidden;
-    /* Prevents horizontal scroll */
     font-family: "Poppins", sans-serif;
-
-}
-
-body {
     background: linear-gradient(#05285D, #9E9FA0);
 
 }
@@ -26,6 +22,7 @@ a:hover,
 a:active {
     text-decoration: underline;
 }
+
 /* FEEDBACK & FAQ LINKS */
 .navlink {
     display: flex;
@@ -33,13 +30,19 @@ a:active {
     width: 100px;
     height: 30px;
     margin-top: 5px;
+    position: relative;
+    top: 20px;
+    left: 300px;
 }
-
+.navlink a{
+    font-size: medium;
+}
 #vertiline {
     position: relative;
     bottom: -5px;
 }
-@media (max-width:480px){
+
+@media (max-width:480px) {
     .navlink {
         display: flex;
         flex-direction: row;
@@ -50,6 +53,7 @@ a:active {
         gap: 3px;
     }
 }
+
 /* ENDS */
 
 /* LOGO AND QUERY STARTS */
@@ -70,6 +74,8 @@ a:active {
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    position: relative;
+    top: 20px;
 }
 
 .textare {
@@ -108,16 +114,19 @@ a:active {
     margin: 10px;
     padding: 10px;
     color: azure;
-    border-color:white ;
+    border-color: white;
 }
-.rightbox input::placeholder{
+
+.rightbox input::placeholder {
     color: black;
 }
-.rightbox input:hover{
+
+.rightbox input:hover {
     background: transparent;
 }
-.rightbox input:hover::placeholder{
-    color:white;
+
+.rightbox input:hover::placeholder {
+    color: white;
 }
 
 .rightbox button {
@@ -144,7 +153,8 @@ a:active {
     margin-left: auto;
     margin-right: auto;
 }
-@media (max-width:480px){
+
+@media (max-width:480px) {
     #logo {
         width: 80px;
         height: 80px;
@@ -154,19 +164,21 @@ a:active {
         margin-left: auto;
         margin-right: auto;
     }
+
     #city {
         position: relative;
         top: 6px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size:medium;
+        font-size: medium;
     }
-    
+
     #Solve {
         font-style: normal;
         position: relative;
-        top:-22px;
+        top: -22px;
         font-size: smaller;
     }
+
     .rightbox input {
         height: 25px;
         width: 100px;
@@ -174,9 +186,10 @@ a:active {
         margin: 10px;
         padding: 6px;
         color: azure;
-        border-color:white ;
+        border-color: white;
 
     }
+
     .rightbox button {
         height: 25px;
         width: 32px;
@@ -197,21 +210,23 @@ a:active {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     /* Ensures space between nav and button */
     padding: 10px;
     width: 100vw;
     position: relative;
-    bottom: -18px;
+    top: 47px;
 }
 
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 15px;
     position: relative;
-    left: 100px;
+    left: 70px;
     transition: 0.3s;
+    gap: 45px;
 }
 
 #a1 {
@@ -222,38 +237,38 @@ a:active {
 }
 
 .nav #a1:hover {
-    background: #223755;
+    background: #152c64;
     color: white;
     text-align: center;
     text-decoration: none;
 }
 
-.Login {
-    display: block;
-    position: relative;
-    bottom: -20px;
-}
 
 .Login button {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .Login button:hover {
-    background: rgb(241, 239, 239);
+    background: rgb(213, 211, 211);
 }
 
 
 #linemidd {
     border: 1px solid white;
-    width: 78%;
+    width: 68%;
+    position: relative;
+    top: 30px;
 }
 
 .Login button {
     background-color: white;
     border-radius: 20px;
     font-size: 13px;
-    padding: 10px;
+    height: 38px;
+    width: 120px;
     cursor: pointer;
+    position: relative;
+    top: 6px;
 }
 
 @media (max-width:480px) {
@@ -265,13 +280,16 @@ a:active {
         height: 30px;
         cursor: pointer;
     }
-}
 
+    /* NAVIGATION ENDS */
+
+}
 .container {
     width: 100vw;
     height: 100vh;
     position: relative;
     display: flex;
+    top: 10px;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(100%);
@@ -279,7 +297,7 @@ a:active {
 }
 
 .container1 {
-    width: 50vw;
+    width: 35vw;
     height: 50vh;
     position: relative;
     display: flex;

@@ -284,88 +284,6 @@ a:active {
     /* NAVIGATION ENDS */
 
 }
-/* SIGN UP FORM */
-.container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:transparent;
-    
-}
-.child{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    width:35%;
-    height: 70%;
-    border-radius: 10px;
-    gap: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background: #396f8c;
-}
-.child p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size:x-large;
-    color: rgb(255, 255, 255);
-
-}
-
-.formdiv{
-    display: flex;
-    justify-content: center;
-    flex-direction:column;
-    gap: 20px;
-}
-
-.formdiv input{
-    border: none;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    outline: none;
-    width: 250px;
-    background: transparent;
-    padding: 5px;
-    font-style: italic;
-    font-size: 14px;
-}
-.formdiv input:focus {
-    outline: none; /* Ensures no border/outline appears on click */
-    box-shadow: none; /* Removes any shadow effect */
-    border-bottom: 2px solid rgb(255, 255, 255);
-  }
-  #button {
-    position: relative; /* Ensures proper positioning */
-    top: 100px;
-    left: 50px;
-    width: 180px;
-    height: 40px;
-    border: 2px solid none;
-    background: white;
-    box-shadow: 1px transparent;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-
-}
-.formdiv input::placeholder{
-    color: rgb(0, 0, 0);
-
-}
-.formdiv input:hover::placeholder{
-    color: rgb(134, 133, 133);
-
-}
-
-/* Hover Effect */
-#button:hover {
-    background: linear-gradient(90deg, rgba(0,255,243,1) 10%, rgb(0, 80, 120) 90%);
-    transform: scale(1.05);
-} 
-/* FOOTER SECTION */
 .footer {
     height: 100vh;
     display: flex;
@@ -440,4 +358,46 @@ a:active {
 
 .linkedin-link:hover i {
     color: #004471;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact #clink {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+a:link,
+a:visited {
+    color: white;
+    text-decoration: none;
+
+    padding: 10px;
+
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
 }
