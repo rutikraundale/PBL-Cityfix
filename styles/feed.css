@@ -1,7 +1,14 @@
-body {
-    width: fit-content;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     font-family: "Poppins", sans-serif;
     background: linear-gradient(#05285D, #9E9FA0);
 
@@ -25,16 +32,25 @@ a:active {
 .navlink {
     display: flex;
     flex-direction: row;
-    width: 100px;
-    height: 30px;
-    margin-top: 5px;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+   
+    
 }
-
+.navlink a,hr{
+    font-size:medium;
+    position: relative;
+    left: 270px;
+}
 #vertiline {
     position: relative;
-    bottom: -5px;
+    bottom: -10px;
+    height: 18px;
+    color: rgb(102, 102, 102);
 }
-@media (max-width:480px){
+
+@media (max-width:480px) {
     .navlink {
         display: flex;
         flex-direction: row;
@@ -45,6 +61,7 @@ a:active {
         gap: 3px;
     }
 }
+
 /* ENDS */
 
 /* LOGO AND QUERY STARTS */
@@ -52,6 +69,7 @@ a:active {
     display: flex;
     position: relative;
     bottom: -9px;
+    right: 40px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -65,62 +83,62 @@ a:active {
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    position: relative;
+    top: 20px;
 }
 
 .textare {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
 }
 
-#logoline {
+/* #logoline {
     height: 70px;
-}
+} */
 
 #city {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    font-size: x-large;
 }
 
 #Solve {
-    font-style: normal;
-    position: relative;
-    bottom: 12px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* position: relative;
+    font-size:medium;
+    top: -25px; */
 }
 
-.rightbox search {
+.rightbox{
     display: flex;
     justify-content: right;
     align-items: center;
     position: relative;
+    top: 10px;
     /* flex-grow: 1; */
     flex-shrink: 1;
 }
 
 .rightbox input {
-    height: 30px;
-    border-radius: 15px;
+    height: 40px;
+    width: 250px;
+    border-radius: 35px;
     margin: 10px;
     padding: 10px;
     color: azure;
-    border-color:white ;
-}
-.rightbox input::placeholder{
-    color: black;
-}
-.rightbox input:hover{
-    background: transparent;
-}
-.rightbox input:hover::placeholder{
-    color:white;
+    border-color: white;
 }
 
-.rightbox button {
-    height: 28px;
-    width: 42px;
-    border-radius: 9px;
+.rightbox input::placeholder {
     color: black;
-    background-color: white;
+}
+
+.rightbox input:hover {
+    background: transparent;
+}
+
+.rightbox input:hover::placeholder {
+    color: white;
 }
 
 .left p {
@@ -131,15 +149,16 @@ a:active {
 
 
 #logo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
 }
-@media (max-width:480px){
+
+@media (max-width:480px) {
     #logo {
         width: 80px;
         height: 80px;
@@ -149,19 +168,21 @@ a:active {
         margin-left: auto;
         margin-right: auto;
     }
+
     #city {
         position: relative;
         top: 6px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size:medium;
+        font-size: medium;
     }
-    
+
     #Solve {
         font-style: normal;
         position: relative;
-        top:-22px;
+        top: -22px;
         font-size: smaller;
     }
+
     .rightbox input {
         height: 25px;
         width: 100px;
@@ -169,88 +190,83 @@ a:active {
         margin: 10px;
         padding: 6px;
         color: azure;
-        border-color:white ;
+        border-color: white;
 
     }
-    .rightbox button {
-        height: 25px;
-        width: 32px;
-        border-radius: 9px;
-        color: black;
-        background-color: white;
-    }
+
 
 }
 
 
 
 
-/* ENDS */
+/* ENDS *********************************/
 
 
 .pagelink {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     /* Ensures space between nav and button */
-    padding: 10px;
-    width: 100vw;
     position: relative;
-    bottom: -18px;
+    top: 10px;
+    width: 100vw;
+    
 }
 
 .nav {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    margin-top: 25px;
-    position: relative;
-    left: 100px;
-    transition: 0.3s;
-    gap: 10px;
+    margin-top: 15px;
+    width: 100vw;
+    height: 50px;
+    gap: 20px;
+
+
 }
 
 #a1 {
-    width: 80px;
-    height: 15px;
+    width: 100px;
+    height: 35px;
     text-align: center;
     background: transparent;
 }
 
 .nav #a1:hover {
-    background: #0d2667;
+    background: #152c64;
     color: white;
     text-align: center;
     text-decoration: none;
 }
-
-.Login {
-    display: block;
-    position: relative;
-    bottom: -20px;
-}
-
 .Login button {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 50px;
+    border-color: transparent;
+    background: #ffffff;
+    font-size: 13px;
+    height: 35px;
+    width: 120px;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
 }
-
+.Login{
+    position: relative;
+    right: 200px;
+}
 .Login button:hover {
     background: rgb(213, 211, 211);
 }
 
 
-#linemidd {
-    border: 1px solid hsl(0, 0%, 100%);
-    width: 78%;
+.linemidd {
+    width: 1200px;
+    position:relative;
 }
 
-.Login button {
-    background-color: white;
-    border-radius: 20px;
-    font-size: 13px;
-    padding: 10px;
-    cursor: pointer;
-}
+
 
 @media (max-width:480px) {
     .Login button {
@@ -261,6 +277,9 @@ a:active {
         height: 30px;
         cursor: pointer;
     }
+
+    /* NAVIGATION ENDS */
+
 }
 .container {
     width: 100vw;
@@ -298,10 +317,14 @@ a:active {
     font-style: italic;
     position: absolute;
     top: 0px;
+    height: 60px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background: rgb(37, 111, 171);
     background: linear-gradient(90deg, rgba(37, 111, 171, 1) 26%, rgba(40, 173, 190, 1) 70%);
+}
+.para1 p{
+    margin: 5px;
 }
 
 .container1 #para2 {
@@ -334,57 +357,65 @@ a:active {
 
 }
 
-.footer {
-    height: 100vh;
+.footer{
     display: flex;
     flex-direction: row;
-    height: fit-content;
+    height:200px;
     justify-content: space-around;
-    background: rgb(7, 33, 51);
-    background: linear-gradient(90deg, rgba(7, 33, 51, 1) 42%, rgba(11, 59, 91, 1) 100%);
+    background:#102340;
 }
-
-.Address {
+.Address{
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
+    
 }
-
-.Address p {
-    font-size: 20px;
+.Address p{
+    font-size:25px;
     margin: 10px;
     padding: 10px;
-    font-style: normal;
+    font-style:normal;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     color: white;
     position: relative;
-    left: -30px;
+    left:-30px ;
 }
+.lastsec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-#img1 {
+}
+.lastsec li{
+    color: white;
+}
+    
+#img1{
     width: 90px;
     height: 87px;
 }
-
-#img2 {
+#img2{
     width: 100px;
     height: 90px;
 }
-
-.leftimg {
+.leftimg{
     width: 290px;
     height: 150px;
     display: flex;
+    gap: 30px;
+    position: relative;
+    top: 20px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
-
 .linkedin-link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #0077b5;
-    /* LinkedIn Blue */
+    color: #0077b5; /* LinkedIn Blue */
     font-size: 15px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
@@ -394,14 +425,13 @@ a:active {
 /* Icon styling */
 .linkedin-link i {
     font-size: 20px;
-    margin-right: 8px;
-    /* Space between icon and text */
-    transition: color 0.3s;
+    margin-right: 8px; /* Space between icon and text */
+    transition: color 0.3s ;
 }
 
 /* Hover effect: change color */
 .linkedin-link:hover {
-    color: rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
     text-decoration: none;
 
 }

@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     width: fit-content;
     height: fit-content;
@@ -27,19 +32,22 @@ a:active {
 .navlink {
     display: flex;
     flex-direction: row;
-    width: 100px;
-    height: 30px;
-    margin-top: 5px;
-    position: relative;
-    top: 20px;
-    left: 300px;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+   
+    
 }
-.navlink a{
-    font-size: medium;
+.navlink a,hr{
+    font-size:medium;
+    position: relative;
+    left: 270px;
 }
 #vertiline {
     position: relative;
-    bottom: -5px;
+    bottom: -10px;
+    height: 18px;
+    color: rgb(102, 102, 102);
 }
 
 @media (max-width:480px) {
@@ -61,6 +69,7 @@ a:active {
     display: flex;
     position: relative;
     bottom: -9px;
+    right: 40px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -81,36 +90,39 @@ a:active {
 .textare {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
 }
 
-#logoline {
+/* #logoline {
     height: 70px;
-}
+} */
 
 #city {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    font-size: x-large;
 }
 
 #Solve {
-    font-style: normal;
-    position: relative;
-    bottom: 12px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* position: relative;
+    font-size:medium;
+    top: -25px; */
 }
 
-.rightbox search {
+.rightbox{
     display: flex;
     justify-content: right;
     align-items: center;
     position: relative;
+    top: 10px;
     /* flex-grow: 1; */
     flex-shrink: 1;
 }
 
 .rightbox input {
-    height: 30px;
-    border-radius: 15px;
+    height: 40px;
+    width: 250px;
+    border-radius: 35px;
     margin: 10px;
     padding: 10px;
     color: azure;
@@ -129,14 +141,6 @@ a:active {
     color: white;
 }
 
-.rightbox button {
-    height: 28px;
-    width: 42px;
-    border-radius: 9px;
-    color: black;
-    background-color: white;
-}
-
 .left p {
     color: white;
     font-style: italic;
@@ -145,8 +149,8 @@ a:active {
 
 
 #logo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     padding: 10px;
@@ -190,48 +194,42 @@ a:active {
 
     }
 
-    .rightbox button {
-        height: 25px;
-        width: 32px;
-        border-radius: 9px;
-        color: black;
-        background-color: white;
-    }
 
 }
 
 
 
 
-/* ENDS */
+/* ENDS *********************************/
 
 
 .pagelink {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     /* Ensures space between nav and button */
-    padding: 10px;
-    width: 100vw;
     position: relative;
-    top: 47px;
+    top: 10px;
+    width: 100vw;
+    
 }
 
 .nav {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     margin-top: 15px;
-    position: relative;
-    left: 70px;
-    transition: 0.3s;
-    gap: 45px;
+    width: 100vw;
+    height: 50px;
+    gap: 20px;
+
+
 }
 
 #a1 {
-    width: 80px;
-    height: 15px;
+    width: 100px;
+    height: 35px;
     text-align: center;
     background: transparent;
 }
@@ -242,34 +240,33 @@ a:active {
     text-align: center;
     text-decoration: none;
 }
-
-
 .Login button {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 50px;
+    border-color: transparent;
+    background: #ffffff;
+    font-size: 13px;
+    height: 35px;
+    width: 120px;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
 }
-
+.Login{
+    position: relative;
+    right: 200px;
+}
 .Login button:hover {
     background: rgb(213, 211, 211);
 }
 
 
-#linemidd {
-    border: 1px solid white;
-    width: 68%;
-    position: relative;
-    top: 30px;
+.linemidd {
+    width: 1200px;
+    position:relative;
 }
 
-.Login button {
-    background-color: white;
-    border-radius: 20px;
-    font-size: 13px;
-    height: 38px;
-    width: 120px;
-    cursor: pointer;
-    position: relative;
-    top: 6px;
-}
+
 
 @media (max-width:480px) {
     .Login button {
@@ -284,6 +281,7 @@ a:active {
     /* NAVIGATION ENDS */
 
 }
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -318,12 +316,14 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 10px;
 }
 
-.login1 h4 {
+/* .login1 h4 {
     position: absolute;
     top: -10px;
-}
+} */
 
 .container1 .user {
     display: flex;
@@ -496,27 +496,38 @@ a:active {
 
 }
 .footer{
-    height: 100vh;
     display: flex;
     flex-direction: row;
-    height: fit-content;
+    height:200px;
     justify-content: space-around;
-    background: rgb(7,33,51);
-    background: linear-gradient(90deg, rgba(7,33,51,1) 42%, rgba(11,59,91,1) 100%);
+    background:#102340;
 }
 .Address{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 .Address p{
-    font-size:20px;
+    font-size:25px;
     margin: 10px;
     padding: 10px;
     font-style:normal;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     color: white;
     position: relative;
     left:-30px ;
+}
+.lastsec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.lastsec li{
+    color: white;
 }
     
 #img1{
@@ -531,8 +542,11 @@ a:active {
     width: 290px;
     height: 150px;
     display: flex;
+    gap: 30px;
+    position: relative;
+    top: 20px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .linkedin-link {

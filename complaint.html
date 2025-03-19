@@ -10,47 +10,59 @@
         
 <body>
     <script src="https://kit.fontawesome.com/14839cd535.js" crossorigin="anonymous"></script>
-   <nav>
+    <div class="navlink">
+        <a href="#">Feedback</a>
+        <hr id="vertiline">
+        <a href="#">FAQs</a>
+
+    </div>
+    <nav>
     <div class="left">
         <div class="leftbox">
             <div class="leimg">
                 <img id="logo" src="./images/logo.png" alt="Logo" width="90">
             </div>
+
             <div class="textare">
-                <p>Cityfix</p>
-                <p>Solving Urban Challenges</p>
+                <p id="city">Cityfix</p>
+                <p id="Solve">Solving Urban Challenges</p>
             </div>
         </div>
         <div class="rightbox">
-                
-                <div>
-                    <i class="fa-solid fa-user"></i>
-                    <a href="#">Username
-                    </a>
-                </div>
-                
+
+            <form action="#">
+                <input type="search" id="query" placeholder="Search">
+
+            </form>
         </div>
-            
-            
+
+
+    </div>
+</nav>
+
+<div class="pagelink">
+    <div class="nav">
+        <a id="a1" href="#">Home</a>
+        <a id="a1" href="#">About us</a>
+        <a id="a1" href="#">Contact us</a>
+        <a id="a1" href="#">Activities</a>
+        
+    </div>
+    <div class="Login">
+        <button title="Login">Login/Register</button>
+    </div>
+    
 </div>
-   </nav>
-   <div class="menu">
-        <div class="menubar">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="para">
-            <p>Complaint Portal</p>
-        </div>
+<div class="linemidd">
+    <hr>
 
-
-   </div>
-    <hr id="linemidd">
-
+</div>
 
     <div class="container">
         <div class="container1">
             <div class="container2">
                 <p>Personal Details</p>
+                
                 <form >
                             
                     <div class="box1">
@@ -66,10 +78,12 @@
                         <label for="Area">Area*</label>
                         <select name="area" id="area">
                             <option value="Not Select">Not selected</option>
-                            <option value="New Nashik">New Nashik</option>
-                            <option value="Gang">Gangapur road</option>
+                            <option value="New Nashik">Nashik-East</option>
+                            <option value="Gang">Nashik-West</option>
                             <option value="road">Nashik Road</option>
-                            <option value="mum">Mumbai Naka</option>
+                            <option value="mum">Panchavati</option>
+                            <option value="mum">CIDCO</option>
+                            <option value="mum">Satpur</option>
                         </select>
                     </div>
                     <div class="box3">
@@ -87,10 +101,12 @@
                         <label for="Area">Area*</label>
                     <select name="area" id="area">
                         <option value="Not Select">Not selected</option>
-                        <option value="New Nashik">New Nashik</option>
-                        <option value="Gang">Gangapur road</option>
+                        <option value="New Nashik">Nashik-East</option>
+                        <option value="Gang">Nashik-West</option>
                         <option value="road">Nashik Road</option>
-                        <option value="mum">Mumbai Naka</option>
+                        <option value="mum">Panchavati</option>
+                        <option value="mum">CIDCO</option>
+                        <option value="mum">Satpur</option>
                     </select>
                     <label for="pin">Pincode*</label>
                     <input type="tel" name="pin" id="pin" maxlength="6">
@@ -111,6 +127,8 @@
                         <option value="riot">Pre-Riot Info</option>
                         <option value="mob">Mob Gathering</option>
                     </select>
+                    <label for="department">Department</label>
+                    <input type="text" disabled>
                     <label for="location">Location</label>
                     <input type="text" name="lloc" id="location">
                     </div>
@@ -137,5 +155,37 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="footer">
+            <div class="Address">
+                <p>Developers:</p>
+
+                <a href="https://www.linkedin.com/in/rutik-raundale-348136289" class="linkedin-link" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> Rutik Raundale
+                </a>
+                <a href="https://www.linkedin.com/in/ajinkya-pingal-892383327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    class="linkedin-link" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>Ajinkya Pingal
+                </a>
+
+            </div>
+
+            <div class="lastsec">
+                <ul>
+
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Website Policy</a></li>
+                    
+                </ul>
+            </div>
+            <div class="leftimg">
+                <img id="img1" src="./images/ashokaa.jpg" alt="ashokhastambh">
+                <img id="img2" src="./images/make.webp" alt="makeinindia">
+            </div>
+
+        </div>
+    </footer>
+
 </body>
 </html>

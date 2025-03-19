@@ -1,230 +1,461 @@
-html, body {
+*{
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100vh;
+    box-sizing: border-box;
+}
+body {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(#05285D, #9E9FA0);
+
 }
 
-body{
-    background:linear-gradient(#05285D,#9E9FA0);
-    
-}
-a:link,a:visited{
+a:link,
+a:visited {
     color: white;
     text-decoration: none;
+
     padding: 10px;
+
 }
-a:hover,a:active{
+
+a:hover,
+a:active {
     text-decoration: underline;
 }
-#logo{
-    width: 100px;
+
+/* FEEDBACK & FAQ LINKS */
+.navlink {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+   
+    
+}
+.navlink a,hr{
+    font-size:medium;
+    position: relative;
+    left: 270px;
+}
+#vertiline {
+    position: relative;
+    bottom: -10px;
+    height: 18px;
+    color: rgb(102, 102, 102);
+}
+
+@media (max-width:480px) {
+    .navlink {
+        display: flex;
+        flex-direction: row;
+        width: 60px;
+        height: 20px;
+        margin-top: 5px;
+        font-size: smaller;
+        gap: 3px;
+    }
+}
+
+/* ENDS */
+
+/* LOGO AND QUERY STARTS */
+.left {
+    display: flex;
+    position: relative;
+    bottom: -9px;
+    right: 40px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
     height: 100px;
+}
+
+.leftbox {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+
+.textare {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* #logoline {
+    height: 70px;
+} */
+
+#city {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    font-size: x-large;
+}
+
+#Solve {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* position: relative;
+    font-size:medium;
+    top: -25px; */
+}
+
+.rightbox{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+}
+
+.rightbox input {
+    height: 40px;
+    width: 250px;
+    border-radius: 35px;
+    margin: 10px;
+    padding: 10px;
+    color: azure;
+    border-color: white;
+}
+
+.rightbox input::placeholder {
+    color: black;
+}
+
+.rightbox input:hover {
+    background: transparent;
+}
+
+.rightbox input:hover::placeholder {
+    color: white;
+}
+
+.left p {
+    color: white;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+
+#logo {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     padding: 10px;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
-.left{
-    display: flex;
-    flex-direction:row;
-    justify-content:space-around ;
-    align-items: center;
-    margin: 10px;
-    width: 100%;
-    height: 100px;
+
+@media (max-width:480px) {
+    #logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #city {
+        position: relative;
+        top: 6px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: medium;
+    }
+
+    #Solve {
+        font-style: normal;
+        position: relative;
+        top: -22px;
+        font-size: smaller;
+    }
+
+    .rightbox input {
+        height: 25px;
+        width: 100px;
+        border-radius: 12px;
+        margin: 10px;
+        padding: 6px;
+        color: azure;
+        border-color: white;
+
+    }
+
+
 }
-.leftbox{
+
+
+
+
+/* ENDS *********************************/
+
+
+.pagelink {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* Ensures space between nav and button */
+    position: relative;
+    top: 10px;
+    width: 100vw;
+    
 }
-.textare{
+
+.nav {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 15px;
+    width: 100vw;
+    height: 50px;
+    gap: 20px;
+
+
+}
+
+#a1 {
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    background: transparent;
+}
+
+.nav #a1:hover {
+    background: #152c64;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.Login button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 50px;
+    border-color: transparent;
+    background: #ffffff;
+    font-size: 13px;
+    height: 35px;
+    width: 120px;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+}
+.Login{
+    position: relative;
+    right: 200px;
+}
+.Login button:hover {
+    background: rgb(213, 211, 211);
+}
+
+
+.linemidd {
+    width: 1200px;
+    position:relative;
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width:480px) {
+    .Login button {
+        background-color: white;
+        border-radius: 20px;
+        font-size: 10px;
+        padding: 10px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    /* NAVIGATION ENDS */
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    background-color: #c4c4c6;
+}
+
+.container1 {
+    width: 60%;
+    background: white;
+    padding: 20px;
+    
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container1 p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container1 form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two inputs per row */
+    gap: 15px;
+}
+
+.container1 .box1, .box2, .box3, .box4, .box5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Label and input in the same row */
+    gap: 10px;
+}
+
+.container1 .box6, .file {
+    grid-column: span 2; /* These take full width */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container1 .box7{
+    grid-column: span 2; /* These take full width */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.container1 input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container1 button {
+    padding: 8px 12px;
+    background-color: #082170;
+    color: white;
+    border: none;
+    border-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container1 button:hover {
+    background-color: #0056b3;
+    border-color: white;
+}
+
+#submit, #reset {
+    width: 100px;
+    background-color:white;
+    color:black;
+    border-color: black;
+    cursor: pointer;
+}
+
+#reset {
+    background-color:white;
+    color:black;
+    border-color: black;
+    cursor: pointer;
+}
+#submit:hover{
+    border-color:white;
+    background: black;
+    color:white;
+}
+#reset:hover{
+    border-color:white;
+    background: black;
+    color:white;
+}
+/* **************************************** */
+.footer{
+    display: flex;
+    flex-direction: row;
+    height:200px;
+    justify-content: space-around;
+    background:#102340;
+}
+.Address{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.left p {
-    color:white;
-    font-style: italic;
-    font-weight:lighter;
-}
-.rightbox{
-    display: flex;
-    flex-direction: row;
-}
-.menu{
-    display: flex;
-    position: relative;
-    flex-direction: row;
     align-items: center;
-    height: 50px;
-}
-.menubar{
-    margin-right: auto;
-    margin-left: 20px;
-    padding: 10px;
     
 }
-.menubar i{
-    width: 25px;
-    height: 20px;
+.Address p{
+    font-size:25px;
+    margin: 10px;
+    padding: 10px;
+    font-style:normal;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    position: relative;
+    left:-30px ;
 }
-.para{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    margin: 20px;
-    padding:10px;
-    font-size: 30px;
+.lastsec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.lastsec li{
     color: white;
 }
-.linemidd{
-    border: 10px solid white;
+    
+#img1{
+    width: 90px;
+    height: 87px;
 }
-.container{
+#img2{
+    width: 100px;
+    height: 90px;
+}
+.leftimg{
+    width: 290px;
+    height: 150px;
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    gap: 30px;
+    position: relative;
+    top: 20px;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
-.container1{
-    width: 70vw;
-    height: 100vh;
-    max-height: 100%;
+.linkedin-link {
     display: flex;
-    justify-content: center;
-    
     align-items: center;
-    border-radius: 30px;
-    background: rgb(72,92,144);
-    background: linear-gradient(90deg, rgba(72,92,144,1) 12%, rgba(46,72,138,1) 53%, rgba(67,106,204,1) 100%);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.container2{
-    width: 50vw;
-    max-width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    overflow: auto;
-    flex-direction: column;
-    border-radius: 40px;
-    align-items: center;
-    background-color: azure;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.container2 p{
-    color: black;
-    font-size: large;
+    text-decoration: none;
+    color: #0077b5; /* LinkedIn Blue */
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
     font-style: italic;
-    
 }
-.box1{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10px;
-    padding:5px;
-    gap: 40px;
+
+/* Icon styling */
+.linkedin-link i {
+    font-size: 20px;
+    margin-right: 8px; /* Space between icon and text */
+    transition: color 0.3s ;
 }
-.box2{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10px;
-    padding:5px;
-    gap: 30px;
+
+/* Hover effect: change color */
+.linkedin-link:hover {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+
 }
-.box3{
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    margin: 10px;
-    padding:5px;
-    gap: 30px;
-}
-.container2 .butt{
-    display: flex;
-    justify-content:left;
-    align-items: center;
-    margin: 08px;
-    padding: 10px;
-    
-}
-.box4{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10px;
-    padding:5px;
-    gap: 30px;
-}
-.box5{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10px;
-    padding:5px;
-    gap: 30px;
-}
-.container2 #brieffor{
-    color: black;
-    font-size: large;
-    margin: 10px;
-    margin-top: 10px;
-    padding: 10px;
-}
-.container2 #prob{
-    margin: 10px;
-    padding: 10px;
-    
-}
-.container2 #comp{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-    
-}
-.box6{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.box7{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.file{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 200px;
-}
-.file #Upload{
-    width: 200px;
-    height: 20px;
-}
-.container2 input{
-    border-radius: 5px;
-}
-.container2 select{
-    border-radius: 5px;
-}
-.container2 textarea{
-    border-radius: 5px;
-    background-color:white;
-}
-.container2 button{
-    border-radius: 5px;
+
+.linkedin-link:hover i {
+    color: #004471;
 }

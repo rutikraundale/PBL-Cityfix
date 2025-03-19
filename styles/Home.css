@@ -415,6 +415,9 @@ a:active {
     align-items: center;
 
 }
+.lastsec li{
+    color: white;
+}
     
 #img1{
     width: 90px;
