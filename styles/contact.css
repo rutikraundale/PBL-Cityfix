@@ -11,9 +11,12 @@ body {
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
     background: linear-gradient(#05285D, #9E9FA0);
-
+    overflow-x: hidden;
 }
-
+img {
+    max-width: 100%;
+    height: auto;
+  }
 a:link,
 a:visited {
     color: white;
