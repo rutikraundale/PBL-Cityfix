@@ -345,7 +345,7 @@ a:active {
     display: flex;
     flex-direction: row;
     height:200px;
-    width:100%;
+    width:100vw;
     justify-content: space-around;
     background:#102340;
 }

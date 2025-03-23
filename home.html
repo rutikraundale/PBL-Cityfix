@@ -11,15 +11,15 @@
 </head>
 
 <body>
+    <script src="home.js"></script>
 
-    
-        <div class="navlink">
-            <a href="#">Feedback</a>
-            <hr id="vertiline">
-            <a href="#">FAQs</a>
+    <div class="navlink">
+        <a href="#">Feedback</a>
+        <hr id="vertiline">
+        <a href="#">FAQs</a>
 
-        </div>
-        <nav>
+    </div>
+    <nav>
         <div class="left">
             <div class="leftbox">
                 <div class="leimg">
@@ -32,68 +32,74 @@
                 </div>
             </div>
             <div class="rightbox">
-
                 <form action="#">
-                    <input type="search" id="query" placeholder="Search">
-
+                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()" oninput="filterSuggestions()">
+                    <ul id="suggestionsList" class="suggestions">
+                        <li onclick="selectSuggestion(this)">Register Complaint</li>
+                        <li onclick="selectSuggestion(this)">Track Application Status</li>
+                        <li onclick="selectSuggestion(this)">Analytics</li>
+                        <li onclick="selectSuggestion(this)">Discussion</li>
+                    </ul>
                 </form>
             </div>
+            
 
 
         </div>
     </nav>
 
     <div class="pagelink">
-        <div class="nav">
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    
+        <!-- Navigation Links -->
+        <div class="nav" id="navMenu">
             <a id="a1" href="#">Home</a>
             <a id="a1" href="#">About us</a>
             <a id="a1" href="#">Contact us</a>
-            <a id="a1" href="#">Activities</a>
-            
         </div>
+    
+        <!-- Login Button -->
         <div class="Login">
             <button title="Login">Login/Register</button>
         </div>
-        
+    </div>
+    
+
     </div>
     <div class="linemidd">
         <hr>
 
     </div>
-   
 
-    
+
+
 
 
 
     <div class="middletext">
         <p>Solving daily life problems</p>
     </div>
-    <div class="image">
 
-        <img src="./images/swachh-bharat-759.png" alt="pothhole" width="300" height="150">
-        <img src="./images/sewage.jpg" alt="garbage" width="300" height="150">
-        <img src="./images/image.png" alt="sewage" width="300" height="150">
-
+    <div class="slider">
+        <img id="sliderImage" src="./images/pothhole.png" alt="Slider Image">
     </div>
     <div class="serve">
         <p>Services Provided :</p>
     </div>
     <div class="boxes">
-
-        <a href="#" id="box1">Register Complaint</a>
-        <a href="#" id="box1">Track Application</a>
-        <a href="#" id="box1">Community Discussion</a>
-        <a href="#" id="box1">Analytics</a>
-
+        <a href="#" class="box">Register Complaint</a>
+        <a href="#" class="box">Track Application</a>
+        <a href="#" class="box">Community Discussion</a>
+        <a href="#" class="box">Analytics</a>
     </div>
+    
     <div class="uselink">
         <p> Useful Links</p>
         <ul>
             <li><a href="#">Related Links</a></li>
             <li><a href="#">Government Portals</a></li>
             <li><a href="#">Reports</a></li>
-            <li><a href="#">All</a></li>
         </ul>
     </div>
 
@@ -119,7 +125,7 @@
                     <li><a href="#">Feedback</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Website Policy</a></li>
-                    
+
                 </ul>
             </div>
             <div class="leftimg">
