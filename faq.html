@@ -10,6 +10,8 @@
 </head>
 <body>
     <script src="https://kit.fontawesome.com/14839cd535.js" crossorigin="anonymous"></script>
+    <<script src="home.js"></script>
+
     <div class="navlink">
         <a href="#">Feedback</a>
         <hr id="vertiline">
@@ -17,46 +19,58 @@
 
     </div>
     <nav>
-    <div class="left">
-        <div class="leftbox">
-            <div class="leimg">
-                <img id="logo" src="./images/logo.png" alt="Logo" width="90">
+        <div class="left">
+            <div class="leftbox">
+                <div class="leimg">
+                    <img id="logo" src="./images/logo.png" alt="Logo" width="90">
+                </div>
+
+                <div class="textare">
+                    <p id="city">Cityfix</p>
+                    <p id="Solve">Solving Urban Challenges</p>
+                </div>
             </div>
-
-            <div class="textare">
-                <p id="city">Cityfix</p>
-                <p id="Solve">Solving Urban Challenges</p>
+            <div class="rightbox">
+                <form action="#">
+                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()" oninput="filterSuggestions()">
+                    <ul id="suggestionsList" class="suggestions">
+                        <li onclick="selectSuggestion(this)">Register Complaint</li>
+                        <li onclick="selectSuggestion(this)">Track Application Status</li>
+                        <li onclick="selectSuggestion(this)">Analytics</li>
+                        <li onclick="selectSuggestion(this)">Discussion</li>
+                    </ul>
+                </form>
             </div>
+            
+
+
         </div>
-        <div class="rightbox">
+    </nav>
 
-            <form action="#">
-                <input type="search" id="query" placeholder="Search">
-
-            </form>
+    <div class="pagelink">
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    
+        <!-- Navigation Links -->
+        <div class="nav" id="navMenu">
+            <a id="a1" href="#">Home</a>
+            <a id="a1" href="#">About us</a>
+            <a id="a1" href="#">Contact us</a>
         </div>
-
-
-    </div>
-</nav>
-
-<div class="pagelink">
-    <div class="nav">
-        <a id="a1" href="#">Home</a>
-        <a id="a1" href="#">About us</a>
-        <a id="a1" href="#">Contact us</a>
-        <a id="a1" href="#">Activities</a>
-        
-    </div>
-    <div class="Login">
-        <button title="Login">Login/Register</button>
+    
+        <!-- Login Button -->
+        <div class="Login">
+            <button title="Login">Login/Register</button>
+        </div>
     </div>
     
-</div>
-<div class="linemidd">
-    <hr>
 
-</div>
+    </div>
+    <div class="linemidd">
+        <hr>
+
+    </div>
+
 
 
     <!-- NAVIGATION -->
@@ -92,7 +106,7 @@
         <div class="footer">
             <div class="Address">
                 <p>Developers:</p>
-
+    
                 <a href="https://www.linkedin.com/in/rutik-raundale-348136289" class="linkedin-link" target="_blank">
                     <i class="fa-brands fa-linkedin"></i> Rutik Raundale
                 </a>
@@ -100,44 +114,42 @@
                     class="linkedin-link" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>Ajinkya Pingal
                 </a>
-
+    
             </div>
-
+    
             <div class="lastsec">
                 <ul>
-
+    
                     <li><a href="#">Feedback</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Website Policy</a></li>
-                    
-                    
+    
                 </ul>
             </div>
             <div class="leftimg">
                 <img id="img1" src="./images/ashokaa.jpg" alt="ashokhastambh">
                 <img id="img2" src="./images/make.webp" alt="makeinindia">
             </div>
-
+    
         </div>
     </footer>
 
-    
-    <script>
-        document.querySelectorAll('.question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('.icon');
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                    icon.textContent = '+';
-                } else {
-                    document.querySelectorAll('.answer').forEach(ans => ans.style.display = 'none');
-                    document.querySelectorAll('.icon').forEach(ic => ic.textContent = '+');
-                    answer.style.display = 'block';
-                    icon.textContent = '-';
-                }
-            });
+   <script> 
+    document.addEventListener("DOMContentLoaded", function () {
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach((question) => {
+        question.addEventListener("click", function () {
+            const answer = this.nextElementSibling;
+            const icon = this.querySelector(".icon");
+
+            // Toggle active class
+            answer.classList.toggle("active");
+            icon.classList.toggle("rotated");
         });
-    </script>
+    });
+});
+
+</script>
 </body>
 </html>

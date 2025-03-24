@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   
+
     <meta>
-    <meta >
+    <meta>
     <title>Complaint Portal</title>
     <link rel="stylesheet" href="./styles/comp.css">
     <link rel="shortcut icon" href="./images/cropedlogo.png" type="image/x-icon">
-</head>
-        
-<body>
     <script src="https://kit.fontawesome.com/14839cd535.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <script src="home.js"></script>
+
     <div class="navlink">
         <a href="#">Feedback</a>
         <hr id="vertiline">
@@ -18,66 +23,80 @@
 
     </div>
     <nav>
-    <div class="left">
-        <div class="leftbox">
-            <div class="leimg">
-                <img id="logo" src="./images/logo.png" alt="Logo" width="90">
+        <div class="left">
+            <div class="leftbox">
+                <div class="leimg">
+                    <img id="logo" src="./images/logo.png" alt="Logo" width="90">
+                </div>
+
+                <div class="textare">
+                    <p id="city">Cityfix</p>
+                    <p id="Solve">Solving Urban Challenges</p>
+                </div>
+            </div>
+            <div class="rightbox">
+                <form action="#">
+                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()"
+                        oninput="filterSuggestions()">
+                    <ul id="suggestionsList" class="suggestions">
+                        <li onclick="selectSuggestion(this)">Register Complaint</li>
+                        <li onclick="selectSuggestion(this)">Track Application Status</li>
+                        <li onclick="selectSuggestion(this)">Analytics</li>
+                        <li onclick="selectSuggestion(this)">Discussion</li>
+                    </ul>
+                </form>
             </div>
 
-            <div class="textare">
-                <p id="city">Cityfix</p>
-                <p id="Solve">Solving Urban Challenges</p>
-            </div>
+
+
         </div>
-        <div class="rightbox">
+    </nav>
 
-            <form action="#">
-                <input type="search" id="query" placeholder="Search">
+    <div class="pagelink">
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 
-            </form>
+        <!-- Navigation Links -->
+        <div class="nav" id="navMenu">
+            <a id="a1" href="#">Home</a>
+            <a id="a1" href="#">About us</a>
+            <a id="a1" href="#">Contact us</a>
         </div>
 
+        <!-- Login Button -->
+        <div class="Login">
+            <button title="Login">Login/Register</button>
+        </div>
+    </div>
+
 
     </div>
-</nav>
+    <div class="linemidd">
+        <hr>
 
-<div class="pagelink">
-    <div class="nav">
-        <a id="a1" href="#">Home</a>
-        <a id="a1" href="#">About us</a>
-        <a id="a1" href="#">Contact us</a>
-        <a id="a1" href="#">Activities</a>
-        
     </div>
-    <div class="Login">
-        <button title="Login">Login/Register</button>
-    </div>
-    
-</div>
-<div class="linemidd">
-    <hr>
 
-</div>
 
     <div class="container">
         <div class="container1">
             <div class="container2">
                 <p>Personal Details</p>
-                
-                <form >
-                            
-                    <div class="box1">
-                    <label for="name">Name*:</label>
-                    <input type="text" name="name" id="name">
-                    <label for="mobile">Mobile No*</label>
-                    <input type="tel" pattern="[0-9]{10}" maxlength="10" required>
-                    
+    
+                <form>
+                    <div class="box">
+                        <label for="name">Name*:</label>
+                        <input type="text" name="name" id="name" required>
+    
+                        <label for="mobile">Mobile No*</label>
+                        <input type="tel" name="mobile" id="mobile" pattern="[0-9]{10}" maxlength="10" required>
                     </div>
-                    <div class="box2">
-                        <label for="email" name="Email">Email Id*</label>
-                        <input type="email"name="email" id="email">
-                        <label for="Area">Area*</label>
-                        <select name="area" id="area">
+    
+                    <div class="box">
+                        <label for="email">Email Id*</label>
+                        <input type="email" name="email" id="email" required>
+    
+                        <label for="area1">Area*</label>
+                        <select name="area1" id="area1">
                             <option value="Not Select">Not selected</option>
                             <option value="New Nashik">Nashik-East</option>
                             <option value="Gang">Nashik-West</option>
@@ -87,79 +106,87 @@
                             <option value="mum">Satpur</option>
                         </select>
                     </div>
-                    <div class="box3">
-                        <label for="pin">Pindcode*</label>
-                    <input type="tel" name="pin" id="pin" maxlength="6">
-                    
+    
+                    <div class="box">
+                        <label for="pin1">Pincode*</label>
+                        <input type="tel" name="pin1" id="pin1" maxlength="6" required>
                     </div>
-                    <!-- button -->
-                     <div class="butt">
-                        <button>Same As Above</button>
-                     </div>
-                     <p id="comp">Complaint Details</p>
-                    
-                     <div class="box4">
-                        <label for="Area">Area*</label>
-                    <select name="area" id="area">
-                        <option value="Not Select">Not selected</option>
-                        <option value="New Nashik">Nashik-East</option>
-                        <option value="Gang">Nashik-West</option>
-                        <option value="road">Nashik Road</option>
-                        <option value="mum">Panchavati</option>
-                        <option value="mum">CIDCO</option>
-                        <option value="mum">Satpur</option>
-                    </select>
-                    <label for="pin">Pincode*</label>
-                    <input type="tel" name="pin" id="pin" maxlength="6">
-                     </div>
-                    <div class="box5">
-                        <label for="category">Select Category*</label>
-                    <select name="cat" id="cat">
-                        <option value="Not selected">Not selected</option>
-                        <option value="sewage">Drainage/Sewage Overflow</option>
-                        <option value="circuit">Short Circuit on Pole</option>
-                        <option value="Pipe">Water Leakage in Pipeline</option>
-                        <option value="Garbage">Garbage Leftover</option>
-                        <option value="drug">Illegal Activities</option>
-                        <option value="suspicios">Suspicious Activities</option>
-                        <option value="disturb">Public Disturbance</option>
-                        <option value="animal">Animal Abuses</option>
-                        <option value="theft">Theft</option>
-                        <option value="riot">Pre-Riot Info</option>
-                        <option value="mob">Mob Gathering</option>
-                        <option value="abuse">Animal Abuse</option>
-                        <option value="crime">Cybercrime(Fraud/Scam)</option>
-                        <option value="threats">Online/Mobile threats</option>
-                        
-                    </select>
-                    <label for="department">Department</label>
-                    <input type="text" disabled>
-                    <label for="location">Location</label>
-                    <input type="text" name="lloc" id="location">
+    
+                    <div class="butt">
+                        <button type="button" onclick="copyAddress()">Same As Above</button>
                     </div>
+    
+                    <p id="comp">Complaint Details</p>
+    
+                    <div class="box">
+                        <label for="area2">Area*</label>
+                        <select name="area2" id="area2">
+                            <option value="Not Select">Not selected</option>
+                            <option value="New Nashik">Nashik-East</option>
+                            <option value="Gang">Nashik-West</option>
+                            <option value="road">Nashik Road</option>
+                            <option value="mum">Panchavati</option>
+                            <option value="mum">CIDCO</option>
+                            <option value="mum">Satpur</option>
+                        </select>
+    
+                        <label for="pin2">Pincode*</label>
+                        <input type="tel" name="pin2" id="pin2" maxlength="6" required>
+                    </div>
+    
+                    <div class="box">
+                        <label for="cat">Select Category*</label>
+                        <select name="cat" id="cat">
+                            <option value="Not selected">Not selected</option>
+                            <option value="sewage">Drainage/Sewage Overflow</option>
+                            <option value="circuit">Short Circuit on Pole</option>
+                            <option value="Pipe">Water Leakage in Pipeline</option>
+                            <option value="Garbage">Garbage Leftover</option>
+                            <option value="drug">Illegal Activities</option>
+                            <option value="suspicios">Suspicious Activities</option>
+                            <option value="disturb">Public Disturbance</option>
+                            <option value="animal">Animal Abuses</option>
+                            <option value="theft">Theft</option>
+                            <option value="riot">Pre-Riot Info</option>
+                            <option value="mob">Mob Gathering</option>
+                            <option value="abuse">Animal Abuse</option>
+                            <option value="crime">Cybercrime (Fraud/Scam)</option>
+                            <option value="threats">Online/Mobile threats</option>
+                        </select>
+    
+                        <label for="department">Department</label>
+                        <input type="text" id="department" disabled>
+    
+                        <label for="location">Location</label>
+                        <input type="text" name="lloc" id="location">
+                    </div>
+    
                     <div class="box6">
                         <p id="brieffor">Enter Brief Details of Problem:</p>
-                        <textarea name="text" id="prob" placeholder="Enter Discription of problem" rows="10" cols="30"></textarea> 
-                        
+                        <textarea name="text" id="prob" placeholder="Enter Description of problem" rows="5" cols="30" required></textarea>
                     </div>
+    
                     <div class="file">
-                        <label for="Upload">Upload Supporting File/Image:</label>
-                        <input type="file" id="Upload">
+                        <label for="upload">Upload Supporting File/Image:</label>
+                        <input type="file" id="upload">
                     </div>
-                    
+    
                     <div class="box7">
-                        <label for="submit"></label>
-                        <input type="submit" id="submit">
-                        <label for="reset"></label>
-                        <input type="reset" name="res" id="reset">
+                        <input type="submit" id="submit" value="Submit">
+                        <input type="reset" id="reset" value="Reset">
                     </div>
-                    
                 </form>
-                
-
             </div>
         </div>
     </div>
+    
+    <script>
+        function copyAddress() {
+            document.getElementById("area2").value = document.getElementById("area1").value;
+            document.getElementById("pin2").value = document.getElementById("pin1").value;
+        }
+    </script>
+    
     <footer>
         <div class="footer">
             <div class="Address">
@@ -181,7 +208,7 @@
                     <li><a href="#">Feedback</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Website Policy</a></li>
-                    
+
                 </ul>
             </div>
             <div class="leftimg">
@@ -191,6 +218,6 @@
 
         </div>
     </footer>
-
 </body>
+
 </html>

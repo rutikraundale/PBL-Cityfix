@@ -12,6 +12,8 @@
 
 <body>
 
+    <script src="home.js"></script>
+
     <div class="navlink">
         <a href="#">Feedback</a>
         <hr id="vertiline">
@@ -31,28 +33,39 @@
                 </div>
             </div>
             <div class="rightbox">
-
                 <form action="#">
-                    <input type="search" id="query" placeholder="Search">
-
+                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()" oninput="filterSuggestions()">
+                    <ul id="suggestionsList" class="suggestions">
+                        <li onclick="selectSuggestion(this)">Register Complaint</li>
+                        <li onclick="selectSuggestion(this)">Track Application Status</li>
+                        <li onclick="selectSuggestion(this)">Analytics</li>
+                        <li onclick="selectSuggestion(this)">Discussion</li>
+                    </ul>
                 </form>
             </div>
+            
 
 
         </div>
     </nav>
 
     <div class="pagelink">
-        <div class="nav">
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    
+        <!-- Navigation Links -->
+        <div class="nav" id="navMenu">
             <a id="a1" href="#">Home</a>
             <a id="a1" href="#">About us</a>
             <a id="a1" href="#">Contact us</a>
-            <a id="a1" href="#">Activities</a>
-
         </div>
+    
+        <!-- Login Button -->
         <div class="Login">
             <button title="Login">Login/Register</button>
         </div>
+    </div>
+    
 
     </div>
     <div class="linemidd">
@@ -60,46 +73,58 @@
 
     </div>
 
-    <div class="container">
-        <div class="container1">
-            <div class="login1">
-                <h4>Login</h1>
-            </div>
-            <form action="#" div="position">
-                <div class="user">
+    <!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-                    <input type="email" id="username" placeholder="Username">
-                    <i class="fa-solid fa-user"></i>
-
-                </div>
-                <div class="password">
-
-                    <input type="password" id="pass" placeholder="Password">
-                    <i class="fa-solid fa-lock"></i>
-                </div>
-                <div class="box1">
-                    <input type="checkbox">
-                    <h5>Remember Me</h5>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <div class="box2">
-                    <button>Login</button>
-                </div>
-                <div class="box3">
-                    <p>Don't have account?</p>
-                    <a href="#">Sign Up</a>
-                </div>
-
-            </form>
-
-
+<div class="container">
+    <div class="container1">
+        <div class="login1">
+            <h4>Login</h4>
         </div>
+        <form action="#">
+            <!-- Username Section -->
+            <div class="user">
+                <div class="input-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="email" id="username" placeholder="Username">
+                </div>
+            </div>
+
+            <!-- Password Section -->
+            <div class="password">
+                <div class="input-container">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="pass" placeholder="Password">
+                </div>
+            </div>
+
+            <!-- Remember Me & Forgot Password -->
+            <div class="box1">
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <!-- Login Button -->
+            <div class="box2">
+                <button type="submit">Login</button>
+            </div>
+
+            <!-- Sign Up Option -->
+            <div class="box3">
+                <p>Don't have an account?</p>
+                <a href="#">Sign Up</a>
+            </div>
+        </form>
     </div>
+</div>
+
     <footer>
         <div class="footer">
             <div class="Address">
                 <p>Developers:</p>
-
+    
                 <a href="https://www.linkedin.com/in/rutik-raundale-348136289" class="linkedin-link" target="_blank">
                     <i class="fa-brands fa-linkedin"></i> Rutik Raundale
                 </a>
@@ -107,23 +132,23 @@
                     class="linkedin-link" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>Ajinkya Pingal
                 </a>
-
+    
             </div>
-
+    
             <div class="lastsec">
                 <ul>
-
+    
                     <li><a href="#">Feedback</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Website Policy</a></li>
-                    
+    
                 </ul>
             </div>
             <div class="leftimg">
                 <img id="img1" src="./images/ashokaa.jpg" alt="ashokhastambh">
                 <img id="img2" src="./images/make.webp" alt="makeinindia">
             </div>
-
+    
         </div>
     </footer>
 
