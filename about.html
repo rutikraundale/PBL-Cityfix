@@ -12,13 +12,11 @@
 </head>
 
 <body>
-    <script src="home.js"></script>
 
     <div class="navlink">
-        <a href="#">Feedback</a>
+        <a href="feedback.html" class="flink">Feedback</a>
         <hr id="vertiline">
-        <a href="#">FAQs</a>
-
+    <a href="faq.html" class="flink">FAQs</a>
     </div>
     <nav>
         <div class="left">
@@ -44,6 +42,7 @@
                 </form>
             </div>
             
+            
 
 
         </div>
@@ -55,15 +54,24 @@
     
         <!-- Navigation Links -->
         <div class="nav" id="navMenu">
-            <a id="a1" href="#">Home</a>
-            <a id="a1" href="#">About us</a>
-            <a id="a1" href="#">Contact us</a>
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="about.html">About us</a>
+            <a class="nav-link" href="contact.html">Contact us</a>
         </div>
+        
     
+        
         <!-- Login Button -->
         <div class="Login">
-            <button title="Login">Login/Register</button>
+            <button id="loginbtn">Login/Register</button>
         </div>
+        
+        <div class="user-info" style="display: none;">  <!-- Hidden by default -->
+            <span id="usernameDisplay"></span>
+            <button id="logoutBtn">Logout</button>
+        </div>
+        
+        
     </div>
     
 
@@ -130,6 +138,7 @@
     
         </div>
     </footer>
+    <script src="home.js" defer></script>
 </body>
 
 </html>

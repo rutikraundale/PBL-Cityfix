@@ -11,13 +11,12 @@
 </head>
 
 <body>
-    <script src="home.js"></script>
+    
 
     <div class="navlink">
-        <a href="#">Feedback</a>
+        <a href="feedback.html" class="flink">Feedback</a>
         <hr id="vertiline">
-        <a href="#">FAQs</a>
-
+        <a href="faq.html" class="flink">FAQs</a>
     </div>
     <nav>
         <div class="left">
@@ -33,7 +32,8 @@
             </div>
             <div class="rightbox">
                 <form action="#">
-                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()" oninput="filterSuggestions()">
+                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()"
+                        oninput="filterSuggestions()">
                     <ul id="suggestionsList" class="suggestions">
                         <li onclick="selectSuggestion(this)">Register Complaint</li>
                         <li onclick="selectSuggestion(this)">Track Application Status</li>
@@ -42,29 +42,36 @@
                     </ul>
                 </form>
             </div>
-            
+
+
 
 
         </div>
     </nav>
 
     <div class="pagelink">
-        <!-- Hamburger Menu Icon -->
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    
-        <!-- Navigation Links -->
+
         <div class="nav" id="navMenu">
-            <a id="a1" href="#">Home</a>
-            <a id="a1" href="#">About us</a>
-            <a id="a1" href="#">Contact us</a>
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="about.html">About us</a>
+            <a class="nav-link" href="contact.html">Contact us</a>
+
+            <!-- 🔹 Protected Links (Sirf Logged-in User ke liye) -->
         </div>
-    
+
         <!-- Login Button -->
         <div class="Login">
-            <button title="Login">Login/Register</button>
+            <button title="Login" id="loginbtn">Login/Register</button>
         </div>
+        <div class="user-info">
+            <span id="usernameDisplay"></span>
+            <button id="logoutBtn" style="display: none;">Logout</button>
+        </div>
+        
     </div>
-    
+
+
 
     </div>
     <div class="linemidd">
@@ -88,12 +95,13 @@
         <p>Services Provided :</p>
     </div>
     <div class="boxes">
-        <a href="#" class="box">Register Complaint</a>
-        <a href="#" class="box">Track Application</a>
-        <a href="#" class="box">Community Discussion</a>
-        <a href="#" class="box">Analytics</a>
+        <a class="protected" href="complaint.html">Register Complaint</a>
+        <a class="protected" href="application.html">Track Application</a>
+        <a class="protected" href="community.html">Community Discussion</a>
+        <a class="protected" href="analytics.html">Analytics</a>
     </div>
-    
+
+
     <div class="uselink">
         <p> Useful Links</p>
         <ul>
@@ -122,8 +130,8 @@
             <div class="lastsec">
                 <ul>
 
-                    <li><a href="#">Feedback</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="#">Website Policy</a></li>
 
                 </ul>
@@ -135,6 +143,7 @@
 
         </div>
     </footer>
+    <script src="home.js" defer></script>
 
 </body>
 

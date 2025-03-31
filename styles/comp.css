@@ -283,23 +283,46 @@ body {
     border-radius: 5px;
 }
 
-/* Login Button */
-.Login button {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 50px;
+* Hover Effect */
+.protected:hover {
+    background: linear-gradient(90deg, rgba(190,202,210,1) 38%, rgba(186,194,200,1) 73%, rgba(255,255,255,1) 92%);
+    color: black;
+    transform: scale(1.05);
+    text-decoration: none;
+    box-shadow: rgba(50, 50, 93, 0.3) 0px 15px 30px -10px, rgba(0, 0, 0, 0.4) 0px 10px 20px -10px;
+}
+.Login {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    display: none;  /* By default hidden */
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+#usernameDisplay {
+    font-size: 16px;
+    font-weight: bold;
+    color: white !important; /* Ensure white color */
+}
+
+#logoutBtn {
+    background-color: red;
+    color: white;
     border: none;
-    background: #ffffff;
-    font-size: 13px;
-    height: 35px;
-    width: 120px;
+    padding: 8px 15px;
     cursor: pointer;
-    transition: 0.3s;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
 }
 
-.Login button:hover {
-    background: rgb(213, 211, 211);
+#logoutBtn:hover {
+    background-color: darkred;
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
 

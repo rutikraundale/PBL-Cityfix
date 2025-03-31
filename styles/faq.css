@@ -331,21 +331,13 @@ body {
 }
 /* NAVIGATION ENDS HERE */
 
-/* Main Container */
 .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    height:800px;
-    justify-content: center;
-    position: relative;
-    top: 50px;
-    margin: auto;
-    background: white;
+    max-width: 90%;
+    margin: 50px auto;
     padding: 20px;
+    background: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.8s ease-in-out;
 }
 
 /* Heading */
@@ -356,9 +348,8 @@ h2 {
 
 /* FAQ Section */
 .faq {
-    margin: 15px 0;
+    margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
 }
 
 /* Question Styling */
@@ -368,17 +359,14 @@ h2 {
     padding: 15px;
     background: #2a4b6e;
     color: white;
-    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background 0.3s, transform 0.2s;
+    transition: 0.3s;
 }
 
-/* Hover Effect */
 .question:hover {
     background: #1e3c5a;
-    transform: scale(1.02);
 }
 
 /* Answer Section */
@@ -386,18 +374,17 @@ h2 {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    padding: 0 15px;
     background: #f8f9fa;
     border-radius: 5px;
-    margin-top: 10px;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease-out, padding 0.4s ease-out;
+    margin-top: 5px;
+    transition: 0.4s ease-out;
 }
 
-/* When active, expand smoothly */
+/* Expand answer when active */
 .answer.active {
-    max-height: 100px; /* Set high value to accommodate text */
+    max-height: 200px;
     opacity: 1;
-    padding: 15px;
+    padding: 10px;
 }
 
 /* Rotate icon when active */
@@ -405,29 +392,17 @@ h2 {
     transform: rotate(180deg);
 }
 
-
-
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Mobile Responsive Adjustments */
+/* Responsive */
 @media (max-width: 600px) {
-    .container {
-        padding: 15px;
-    }
     .question {
-        font-size: 16px;
-        padding: 12px;
+        font-size: 14px;
+        padding: 10px;
     }
     .answer {
-        font-size: 14px;
-        padding: 12px;
+        font-size: 13px;
     }
 }
+
 
 .footer {
     display: flex;

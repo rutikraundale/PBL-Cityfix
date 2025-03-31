@@ -4,22 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-In</title>
-    <link rel="stylesheet" href="./styles/sign.css">
+    <title>CityFix-Disscussion</title>
+    <link rel="stylesheet" href="./styles/community.css">
     <link rel="shortcut icon" href="./images/cropedlogo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/14839cd535.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-   
-   
-
+    
 
     <div class="navlink">
-        <a href="feedback.html">Feedback</a>
+        <a href="feedback.html" class="flink">Feedback</a>
         <hr id="vertiline">
-        <a href="faq.html">FAQs</a>
-
+        <a href="faq.html" class="flink">FAQs</a>
     </div>
     <nav>
         <div class="left">
@@ -48,25 +45,31 @@
 
 
 
+
         </div>
     </nav>
 
     <div class="pagelink">
-        <!-- Hamburger Menu Icon -->
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 
-        <!-- Navigation Links -->
         <div class="nav" id="navMenu">
-            <a id="a1" href="home.html">Home</a>
-            <a id="a1" href="about.html">About us</a>
-            <a id="a1" href="contact.html">Contact us</a>
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="about.html">About us</a>
+            <a class="nav-link" href="contact.html">Contact us</a>
+
+            <!-- 🔹 Protected Links (Sirf Logged-in User ke liye) -->
         </div>
 
         <!-- Login Button -->
-        <div class="Login">
-            <button title="Login">Login/Register</button>
+        
+        <div class="user-info">
+            <span id="usernameDisplay"></span>
+            <button id="logoutBtn" style="display: none;">Logout</button>
         </div>
+       
+        
     </div>
+
 
 
     </div>
@@ -74,42 +77,26 @@
         <hr>
 
     </div>
-
-    <!-- NAVIGATION ENDS -->
-
-    <!-- SIGN UP FORM  -->
+    <nav>
+        <h1>CityFix Discussion</h1>
+        
+    </nav>
     <div class="container">
-        <div class="child">
-            <p>Registration Form</p>
-            <form id="registrationForm">
-                <div class="formdiv">
-                    <label for="user">Name:</label>
-                    <input type="text" name="user" id="user" placeholder="* Name" required>
+        <h2>Discussion Board</h2>
+        <textarea id="commentInput" placeholder="Write your comment..."></textarea>
+        <button id="postComment">Post</button>
+        <div id="commentsList"></div>
+        
 
-                    <label for="Email">Email:</label>
-                    <input type="email" name="email" id="Email" placeholder="* Email address" required>
 
-                    <label for="phone">Phone:</label>
-                    <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" inputmode="numeric" maxlength="10"
-                        placeholder="* Phone" required>
-
-                    <label for="pass">Password:</label>
-                    <input type="password" name="password" id="pass" placeholder="* Password" required>
-
-                    <label for="cpass">Confirm Password:</label>
-                    <input type="password" name="confirm_password" id="cpass" placeholder="* Confirm Password" required>
-
-                    <button type="button" id="button">CREATE ACCOUNT</button>
-                    <div class="ll">
-                        <p id="Already">Already have an account?</p>
-                        <a href="login.html">Login</a>
-                    </div>
-                </div>
-            </form>
-        </div>
     </div>
+    
+        
 
-    <!-- FOOTER SECTIION -->
+
+
+
+
     <footer>
         <div class="footer">
             <div class="Address">
@@ -141,8 +128,10 @@
 
         </div>
     </footer>
-    <!-- FOOTER SECTION -->
-    <script src="sign.js" defer></script>
+    <script src="home.js" defer></script>
+    <script src="disscuss.js" defer></script>
+    
+
     
 
 </body>

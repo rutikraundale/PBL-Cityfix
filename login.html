@@ -11,14 +11,7 @@
 </head>
 
 <body>
-
-    <script src="home.js"></script>
-
-    <div class="navlink">
-        <a href="#">Feedback</a>
-        <hr id="vertiline">
-        <a href="#">FAQs</a>
-
+    
     </div>
     <nav>
         <div class="left">
@@ -34,7 +27,8 @@
             </div>
             <div class="rightbox">
                 <form action="#">
-                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()" oninput="filterSuggestions()">
+                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()"
+                        oninput="filterSuggestions()">
                     <ul id="suggestionsList" class="suggestions">
                         <li onclick="selectSuggestion(this)">Register Complaint</li>
                         <li onclick="selectSuggestion(this)">Track Application Status</li>
@@ -43,29 +37,28 @@
                     </ul>
                 </form>
             </div>
-            
-
-
         </div>
     </nav>
 
     <div class="pagelink">
         <!-- Hamburger Menu Icon -->
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    
+
         <!-- Navigation Links -->
         <div class="nav" id="navMenu">
-            <a id="a1" href="#">Home</a>
-            <a id="a1" href="#">About us</a>
-            <a id="a1" href="#">Contact us</a>
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="about.html">About us</a>
+            <a class="nav-link" href="contact.html">Contact us</a>
         </div>
-    
+
+
+
         <!-- Login Button -->
         <div class="Login">
             <button title="Login">Login/Register</button>
         </div>
     </div>
-    
+
 
     </div>
     <div class="linemidd">
@@ -74,57 +67,56 @@
     </div>
 
     <!-- Font Awesome for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-<div class="container">
-    <div class="container1">
-        <div class="login1">
-            <h4>Login</h4>
+    <div class="container">
+        <div class="container1">
+            <div class="login1">
+                <h4>Login</h4>
+            </div>
+            <form id="loginForm">
+                <!-- Email Section (Fix ID) -->
+                <div class="user">
+                    <div class="input-container">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="email" id="email" placeholder="Enter your email" required autocomplete="current-password">
+                    </div>
+                </div>
+
+                <!-- Password Section (Fix ID) -->
+                <div class="password">
+                    <div class="input-container">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" placeholder="Enter your password" required autocomplete="current-password">
+                    </div>
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="box1">
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <!-- Login Button -->
+                <div class="box2">
+                    <button type="submit" id="log">Login</button>
+                </div>
+
+                <!-- Sign Up Option -->
+                <div class="box3">
+                    <p>Don't have an account?</p>
+                    <a href="sign.html">Sign Up</a>
+                </div>
+            </form>
+
         </div>
-        <form action="#">
-            <!-- Username Section -->
-            <div class="user">
-                <div class="input-container">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="email" id="username" placeholder="Username">
-                </div>
-            </div>
-
-            <!-- Password Section -->
-            <div class="password">
-                <div class="input-container">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" id="pass" placeholder="Password">
-                </div>
-            </div>
-
-            <!-- Remember Me & Forgot Password -->
-            <div class="box1">
-                <label>
-                    <input type="checkbox"> Remember Me
-                </label>
-                <a href="#">Forgot Password?</a>
-            </div>
-
-            <!-- Login Button -->
-            <div class="box2">
-                <button type="submit">Login</button>
-            </div>
-
-            <!-- Sign Up Option -->
-            <div class="box3">
-                <p>Don't have an account?</p>
-                <a href="#">Sign Up</a>
-            </div>
-        </form>
     </div>
-</div>
 
     <footer>
         <div class="footer">
             <div class="Address">
                 <p>Developers:</p>
-    
+
                 <a href="https://www.linkedin.com/in/rutik-raundale-348136289" class="linkedin-link" target="_blank">
                     <i class="fa-brands fa-linkedin"></i> Rutik Raundale
                 </a>
@@ -132,25 +124,27 @@
                     class="linkedin-link" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>Ajinkya Pingal
                 </a>
-    
+
             </div>
-    
+
             <div class="lastsec">
                 <ul>
-    
+
                     <li><a href="#">Feedback</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Website Policy</a></li>
-    
+
                 </ul>
             </div>
             <div class="leftimg">
                 <img id="img1" src="./images/ashokaa.jpg" alt="ashokhastambh">
                 <img id="img2" src="./images/make.webp" alt="makeinindia">
             </div>
-    
+
         </div>
     </footer>
+    <script src="login.js" defer></script>
+    
 
 </body>
 

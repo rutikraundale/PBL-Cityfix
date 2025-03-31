@@ -373,20 +373,22 @@ body {
     padding: 5px;
     font-style: italic;
     font-size: 14px;
+    
 }
 .formdiv input:focus {
+    
     outline: none; /* Ensures no border/outline appears on click */
     box-shadow: none; /* Removes any shadow effect */
     border-bottom: 2px solid rgb(255, 255, 255);
   }
   #button {
-    position: relative; /* Ensures proper positioning */
-    top: 100px;
-    left: 50px;
+   
     width: 180px;
     height: 40px;
     border: 2px solid none;
     background: white;
+    margin: 10px;
+    padding: 10px;
     box-shadow: 1px transparent;
     font-size: 16px;
     font-weight: bold;
@@ -396,14 +398,29 @@ body {
 
 }
 .formdiv input::placeholder{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    
 
 }
 .formdiv input:hover::placeholder{
     color: rgb(134, 133, 133);
 
 }
+#Already{
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
 
+}
+.ll{
+    display: flex;
+    flex-direction: row;
+}
+.ll a{
+    font-size: medium;
+    position: relative;
+    bottom: 7px;
+}
 /* Hover Effect */
 #button:hover {
     background: linear-gradient(90deg, rgba(0,255,243,1) 10%, rgb(0, 80, 120) 90%);
