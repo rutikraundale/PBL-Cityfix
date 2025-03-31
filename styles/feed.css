@@ -328,6 +328,7 @@ body {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 }
+/* Main container */
 .container {
     width: 100vw;
     height: 100vh;
@@ -335,73 +336,119 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(#05285D, #9E9FA0);
+    padding: 20px;
 }
 
+/* Inner content container */
 .container1 {
-    width: 70%;
-    height: 70vh;
+    width: 90%;
+    max-width: 600px; /* Prevents it from becoming too wide on large screens */
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    position: relative;
     align-items: center;
     border-radius: 20px;
     background: white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.container1 form {
-    position: absolute;
-}
-
+/* Header inside container */
 .container1 .para1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     font-style: italic;
-    position: absolute;
-    top: 0px;
+    width: 100%;
     height: 60px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background: rgb(37, 111, 171);
     background: linear-gradient(90deg, rgba(37, 111, 171, 1) 26%, rgba(40, 173, 190, 1) 70%);
+    text-align: center;
 }
-.para1 p{
+
+/* Paragraph inside the header */
+.para1 p {
     margin: 5px;
 }
 
-.container1 #para2 {
-    color: black;
-    font-style: normal;
-    margin: 3px;
-
-}
-
+/* Form container */
 .formcontainer {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 4px;
-    position: relative;
-    top: 40px;
-
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
+/* Buttons container */
 .formcontainer .butt {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    margin: 10px;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
+}
 
+/* Responsive Media Queries */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .container1 {
+        width: 95%;
+        min-height: 60vh;
+        padding: 15px;
+    }
+
+    .container1 .para1 {
+        font-size: 14px;
+        height: 50px;
+    }
+
+    .formcontainer {
+        gap: 8px;
+    }
+
+    .formcontainer .butt {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .container1 {
+        width: 100%;
+        min-height: 70vh;
+        padding: 10px;
+    }
+
+    .container1 .para1 {
+        font-size: 12px;
+        height: 45px;
+    }
+
+    .formcontainer {
+        gap: 5px;
+    }
+
+    .formcontainer .butt {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 .footer {
