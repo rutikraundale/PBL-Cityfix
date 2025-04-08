@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cityfix-Admin</title>
+    <link rel="stylesheet" href="./styles/admin.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-img">
+                <img src="./images/cropedlogo.png" id="logo" alt="cityfix-logo">
+                <div class="logo-text">
+                    <p id="cityfix">Cityfix</p>
+                    <p id="nxttext">Solving Urban Challenges</p>
+                </div>
+    
+    
+            </div>
+            <div class="logout-btn">
+                <p>Administration</p>
+                <button id="logoutbtn">Logout</button>
+            </div>
+        </div>
+        <div class="sidepanel">
+            <ul>
+                <li onclick="loadcontent('problems')">Problem Registered</li>
+                <li onclick="loadcontent('analytics')">Analytics</li>
+                <li onclick="loadcontent('adminC')">Admin Controls</li>
+                <li onclick="loadcontent('feedback')">Feedbacks</li>
+            </ul>
+           
+        </div>
+        <div id="main-content">
+            <h2>Welcome to administration page</h2>
+            <p>Select the option from the menu</p>
+        </div>
+    </div>
+    
+    <script src="./scripts/admin.js" defer></script>
+</body>
+
+</html>

@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("navMenu").classList.toggle("active");
     });
 
+
     // **Search Box Handling**
     function showSuggestions() {
         document.getElementById("suggestionsList").style.display = "block";
@@ -95,27 +96,41 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("User NOT logged in");
         }
     });
+    function showSuggestions() {
+        document.getElementById("suggestionsList").style.display = "block";
+    }
+    
+    function filterSuggestions() {
+        let input = document.getElementById("query").value.toLowerCase();
+        let suggestions = document.querySelectorAll("#suggestionsList li");
+    
+        suggestions.forEach(item => {
+            item.style.display = item.textContent.toLowerCase().includes(input) ? "block" : "none";
+        });
+    }
+    
+    function selectSuggestion(element) {
+        let text = element.textContent.trim(); // Get selected suggestion text
+    
+        // Define redirection links based on the selected suggestion
+        let pageLinks = {
+            "Register Complaint": "complaint.html",
+            "Track Application Status": "application.html",
+            "Analytics": "analytics.html",
+            "Discussion": "community.html"
+        };
+    
+        if (pageLinks[text]) {
+            window.location.href = pageLinks[text]; // Redirect to the respective page
+        } else {
+            console.error("No matching page found for:", text);
+        }
+    }
+    
     
 
 
-// document.addEventListener("DOMContentLoaded",function(){
-//     let loginned=localStorage.getItem("loginned");
-//     let protected=document.querySelectorAll(".protected");
 
-//     if(!loginned){
-//         protected.forEach(link=>{
-//             link.addEventListener("click",function(event){
-//                 event.preventDefault();
-//                 alert("Please Login to access");
-//                 window.location.href="login.html";
-
-//             })
-
-//         });
-
-//     }
-
-// });
 document.addEventListener("DOMContentLoaded", function () {
     let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 

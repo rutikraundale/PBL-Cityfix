@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+    let user = JSON.parse(localStorage.getItem("loggedInUser")); // Parse the user object
+    if (!user || !user.name) {  // Check if user exists and has a name
+        alert("Please log in to track your application status.");
+        window.location.href = "login.html";
+        return;
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".sub button").addEventListener("click", function () {
         let appId = document.getElementById("appId").value.trim();
         let complaints = JSON.parse(localStorage.getItem("complaints")) || [];
