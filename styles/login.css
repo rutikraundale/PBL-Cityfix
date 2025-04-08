@@ -414,21 +414,6 @@ body {
     gap: 30px;
 }
 
-.box1 label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: white;
-}
-
-.box1 a {
-    color: white;
-    text-decoration: none;
-}
-
-.box1 a:hover {
-    text-decoration: underline;
-}
 
 /* Login Button */
 .box2 {
@@ -460,6 +445,7 @@ body {
 .box3 {
     text-align: center;
     margin-top: 10px;
+    padding: 10px;
 }
 
 .box3 a {
