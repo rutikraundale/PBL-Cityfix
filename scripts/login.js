@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let existingUser = users.find(user => user.email === email && user.password === password);
 
             if (existingUser) {
-                alert("Login successful!");
+               
                 localStorage.setItem("loggedInUser", JSON.stringify(existingUser));
                 window.location.href = "home.html";
             } else {

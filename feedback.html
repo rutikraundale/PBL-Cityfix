@@ -13,7 +13,7 @@
 <body>
 
 
-    <script src="home.js"></script>
+   
 
     <div class="navlink">
         <a href="feedback.html" class="flink">Feedback</a>
@@ -86,7 +86,7 @@
                     <label for="name">Name*: </label>
                     <input type="text" name="name" id="name" required>
                     <label for="mobile">Mobile No*</label>
-                    <input type="tel" pattern="[0-9]{10}" maxlength="10" required>
+                    <input type="tel" id="mobile" pattern="[0-9]{10}" maxlength="10" required>
 
 
                     <label for="email" name="Email">Email Id*</label>
@@ -103,7 +103,7 @@
 
                     <textarea name="text" id="prob" rows="10" cols="30" required></textarea>
                     <div class="butt">
-                        <button>Submit</button>
+                        <button id="sub-btn">Submit</button>
                         <button>Reset</button>
 
                     </div>
@@ -134,7 +134,7 @@
     
                     <li><a href="feedback.html">Feedback</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Website Policy</a></li>
+                    <li><a href="webpolicy.html">Website Policy</a></li>
     
                 </ul>
             </div>
@@ -146,6 +146,7 @@
         </div>
     </footer>
     <script src="./scripts/home.js" defer></script>
+    <script src="./scripts/new-feedback.js"></script>
 
 
 

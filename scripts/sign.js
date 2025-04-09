@@ -30,7 +30,7 @@ document.getElementById("button").addEventListener("click", function (e) {
 
     localStorage.setItem("users", JSON.stringify(users));
 
-    alert("Registration Successful! Redirecting to login...");
+    
     window.location.href = "login.html";
 
     }

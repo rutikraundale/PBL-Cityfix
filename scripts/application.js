@@ -39,11 +39,15 @@ function displayComplaintDetails(complaint) {
             <th>Name</th>
             <th>Application ID</th>
             <th>Status</th>
+            <th>Remarks</th>
+            
         </tr>
         <tr>
             <td>${complaint.name}</td>
             <td>${complaint.applicationID}</td>
             <td>${complaint.status || "Pending"}</td>
+            <td>${complaint.remarks}</td>
+
         </tr>
     `;
 

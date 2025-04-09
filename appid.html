@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="shortcut icon" href="./images/cropedlogo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/14839cd535.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <style>
+        /* navigation css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            width: 100%;
+            height: auto;
+            max-width: 100vw;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(#05285D, #9E9FA0);
+            overflow-x: hidden;
+        }
+
+        /* Anchor Link Styles */
+        a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover,
+        a:active {
+            text-decoration: underline;
+            color: #f0f0f0;
+        }
+
+
+        /* FEEDBACK & FAQ LINKS */
+        .navlink {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: start;
+            /* Centers content */
+        }
+
+        .navlink a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        /* Vertical Line */
+        #vertiline {
+            width: 1px;
+            height: 20px;
+            background-color: rgb(255, 255, 255);
+            border: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .navlink {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            #vertiline {
+                width: 50px;
+                height: 1px;
+            }
+        }
+
+
+        @media (max-width:480px) {
+            .navlink {
+                display: flex;
+                flex-direction: row;
+                width: 60px;
+                height: 20px;
+                margin-top: 5px;
+                font-size: smaller;
+                gap: 3px;
+            }
+        }
+
+        /* ENDS */
+
+        /* LOGO AND QUERY STARTS */
+        .left {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            /* Space between left and right content */
+            padding: 10px 20px;
+            width: 100%;
+            height: auto;
+        }
+
+        .leftbox {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .textare {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #city {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: x-large;
+            margin-bottom: 3px;
+        }
+
+        #Solve {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+        }
+
+        .rightbox {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        #query {
+            width: 250px;
+            padding: 10px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            outline: none;
+            color: black;
+        }
+
+        #query:hover {
+            background: transparent;
+            color: black;
+        }
+
+        .suggestions {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            border-radius: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-top: none;
+            display: none;
+            /* Initially hidden */
+            z-index: 1000;
+        }
+
+        .suggestions:hover {
+            border-radius: 20px;
+        }
+
+        .suggestions li {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .suggestions li:hover {
+            background: #f0f0f0;
+        }
+
+
+        .left p {
+            color: white;
+            font-style: italic;
+            font-weight: lighter;
+        }
+
+        /* Logo Styling */
+        #logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            padding: 10px;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .left {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .leftbox {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .rightbox {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .rightbox input {
+                width: 180px;
+                height: 35px;
+                border-radius: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #logo {
+                width: 80px;
+                height: 80px;
+                padding: 5px;
+            }
+
+            #city {
+                font-size: medium;
+            }
+
+            #Solve {
+                font-size: smaller;
+            }
+
+            .rightbox input {
+                width: 100px;
+                height: 30px;
+                border-radius: 12px;
+                padding: 5px;
+            }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(#05285D, #9E9FA0);
+        }
+
+        /* Navigation Container */
+        .pagelink {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #102340;
+            position: relative;
+        }
+
+        /* Menu Icon */
+        .menu-icon {
+            font-size: 25px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        /* Hidden Navigation */
+        .nav {
+            display: flex;
+            gap: 50px;
+            position: relative;
+            left: 300px;
+        }
+
+        /* Navigation Links */
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            background: #1c3a78;
+            border-radius: 5px;
+        }
+
+        /* Login Button */
+        .Login button {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-radius: 50px;
+            border: none;
+            background: #ffffff;
+            font-size: 13px;
+            height: 35px;
+            width: 120px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .Login button:hover {
+            background: rgb(213, 211, 211);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+
+            /* Show Menu Icon */
+            .menu-icon {
+                display: block;
+            }
+
+            /* Hide Navigation by Default */
+            .nav {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: -200px;
+                /* Hidden off-screen */
+                height: 100vh;
+                width: 200px;
+                background: #152c64;
+                padding-top: 60px;
+                transition: left 0.3s ease-in-out;
+            }
+
+            /* Show Menu when Active */
+            .nav.active {
+                left: 0;
+            }
+
+            /* Navigation Links (Stacked) */
+            .nav a {
+                padding: 15px;
+                text-align: left;
+                display: block;
+                color: white;
+                font-size: 18px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        }
+
+
+
+
+
+        .footer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* Allows wrapping for small screens */
+            justify-content: space-around;
+            align-items: center;
+            background: #102340;
+            padding: 20px;
+            height: auto;
+            text-align: center;
+        }
+
+        /* ADDRESS SECTION */
+        .Address {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+        }
+
+        /* Address Text */
+        .Address p {
+            font-size: 20px;
+            margin: 10px;
+            padding: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        /* LAST SECTION */
+        .lastsec {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+        /* Last section list items */
+        .lastsec li {
+            color: white;
+            list-style: none;
+            font-size: 16px;
+        }
+
+        /* IMAGE CONTAINER */
+        .leftimg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        /* Image Styling */
+        #img1,
+        #img2 {
+            width: 100px;
+            height: auto;
+            max-width: 90px;
+        }
+
+        /* LINKEDIN LINK */
+        .linkedin-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #0077b5;
+            /* LinkedIn Blue */
+            font-size: 15px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+            font-style: italic;
+        }
+
+        /* Icon Styling */
+        .linkedin-link i {
+            font-size: 20px;
+            margin-right: 8px;
+            /* Space between icon and text */
+            transition: color 0.3s;
+        }
+
+        /* Hover Effect */
+        .linkedin-link:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .linkedin-link:hover i {
+            color: #004471;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .Address p {
+                font-size: 18px;
+            }
+
+            .leftimg {
+                gap: 15px;
+            }
+
+            #img1,
+            #img2 {
+                max-width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .Address p {
+                font-size: 16px;
+            }
+
+            .lastsec li {
+                font-size: 14px;
+            }
+
+            .linkedin-link {
+                font-size: 13px;
+            }
+        }
+        /* application id */
+        .app-id{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 70vh;
+            background: white;
+        }
+        .app-id p{
+            margin: 10px;
+            padding: 10px;
+            font-size: large;
+        }
+    </style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityFix-Home</title>
+    <link rel="stylesheet" href="./styles/Home.css">
+    <link rel="shortcut icon" href="./images/cropedlogo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/14839cd535.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+
+    <div class="navlink">
+        <a href="feedback.html" class="flink">Feedback</a>
+        <hr id="vertiline">
+        <a href="faq.html" class="flink">FAQs</a>
+    </div>
+    <nav>
+        <div class="left">
+            <div class="leftbox">
+                <div class="leimg">
+                    <img id="logo" src="./images/logo.png" alt="Logo" width="90">
+                </div>
+
+                <div class="textare">
+                    <p id="city">Cityfix</p>
+                    <p id="Solve">Solving Urban Challenges</p>
+                </div>
+            </div>
+            <div class="rightbox">
+                <form action="#">
+                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()"
+                        oninput="filterSuggestions()">
+                    <ul id="suggestionsList" class="suggestions">
+                        <li onclick="selectSuggestion(this)">Register Complaint</li>
+                        <li onclick="selectSuggestion(this)">Track Application Status</li>
+                        <li onclick="selectSuggestion(this)">Analytics</li>
+                        <li onclick="selectSuggestion(this)">Discussion</li>
+                    </ul>
+                </form>
+            </div>
+
+
+
+
+        </div>
+    </nav>
+
+    <div class="pagelink">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+        <div class="nav" id="navMenu">
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="about.html">About us</a>
+            <a class="nav-link" href="contact.html">Contact us</a>
+
+        </div>
+
+        <!-- Login Button -->
+        <div class="Login">
+            <button title="Login" id="loginbtn">Login/Register</button>
+        </div>
+        <div class="user-info">
+            <span id="usernameDisplay"></span>
+            <button id="logoutBtn" style="display: none;">Logout</button>
+        </div>
+        
+    </div>
+
+
+
+    </div>
+    <div class="linemidd">
+        <hr>
+
+    </div>
+
+    <div class="app-id">
+        <p id="apid">Your application id:</p>
+    </div>
+
+
+
+
+
+   
+
+
+    <footer>
+        <div class="footer">
+            <div class="Address">
+                <p>Developers:</p>
+
+                <a href="https://www.linkedin.com/in/rutik-raundale-348136289" class="linkedin-link" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> Rutik Raundale
+                </a>
+                <a href="https://www.linkedin.com/in/ajinkya-pingal-892383327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    class="linkedin-link" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>Ajinkya Pingal
+                </a>
+
+            </div>
+
+            <div class="lastsec">
+                <ul>
+
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Website Policy</a></li>
+
+                </ul>
+            </div>
+            <div class="leftimg">
+                <img id="img1" src="./images/ashokaa.jpg" alt="ashokhastambh">
+                <img id="img2" src="./images/make.webp" alt="makeinindia">
+            </div>
+
+        </div>
+    </footer>
+    <script src="./scripts/home.js" defer></script>
+
+</body>
+
+</html>
+    <script>
+        function getapid(){
+            let complaints=JSON.parse(localStorage.getItem("complaints"));
+            let id=complaints.applicationID;
+            if(complaints && complaints.length>0){
+                let latestcomplaint=complaints[complaints.length-1];
+                let compid=latestcomplaint.applicationID;
+                document.getElementById("apid").innerHTML="You application id is : " + compid;
+            }
+            else{
+                document.getElementById("apid").innerHTML="GO BACK";
+            }
+            
+        }
+       
+        
+        function redi(){
+            let timeout=setTimeout(set,1000);
+
+        }
+        function set(){
+            alert("Redirection to home page...");
+            window.location.href="home.html";
+        }
+        window.onload = function() {
+        getapid();
+        redi();
+    }
+    </script>
+
+    <script src="./scripts/home.js" defer></script>
+
+
+
+</body>
+
+</html>

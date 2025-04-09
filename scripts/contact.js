@@ -19,4 +19,4 @@ document.getElementById("sub-btn").addEventListener("click",function(event){
         document.querySelector("form").reset();
     }
     savefeed();
-});
+}); 

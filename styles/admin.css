@@ -118,11 +118,19 @@ body {
     grid-area: main-content;
     padding: 20px;
     background: #f9f9f9;
-    overflow-y: auto;
+    
+    position: relative;
+    z-index: 1;
     margin: 5px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+
 }
+canvas {
+    position: absolute;
+    top: 0;
+  }
+  
