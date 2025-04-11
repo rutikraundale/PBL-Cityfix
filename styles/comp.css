@@ -283,7 +283,7 @@ body {
     border-radius: 5px;
 }
 
-* Hover Effect */
+/* Hover Effect  */
 .protected:hover {
     background: linear-gradient(90deg, rgba(190,202,210,1) 38%, rgba(186,194,200,1) 73%, rgba(255,255,255,1) 92%);
     color: black;
@@ -365,7 +365,7 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     min-height: 100vh;
     background-color: #c4c4c6;
     padding: 20px;
@@ -373,6 +373,9 @@ body {
 
 .container1 {
     width: 60%;
+    max-width: 100%;
+    min-width:300px ;
+    margin: 0 auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -432,9 +435,22 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
     .container1 {
-        width: 95%;
+        width: 100%;
         padding: 15px;
+    }
+    .container1 input,
+    .container1 button,
+    .container1 select,
+    .container1 textarea{
+        font-size: 1rem;
+        width: 100%;
+    }
+    .container2{
+        width: 95%;
+        padding:5px;
+        max-width: 90%;
     }
 
     .container1 form {
@@ -444,11 +460,11 @@ body {
     .box7 {
         flex-direction: column;
     }
-
     #submit, #reset {
         width: 100%;
         padding: 10px;
     }
+    
 }
 
 

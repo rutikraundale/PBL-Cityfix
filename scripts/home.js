@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sliderImage = document.getElementById("sliderImage");
 
-    if (sliderImage) { // Pehle check karo ki image element exist karta hai ya nahi
+    if (sliderImage) { 
         const images = ["images/pothhole.png", "images/sewage.jpg", "images/theft.jpg", "images/swach.png", "images/cyber.avif"];
         let index = 0;
 

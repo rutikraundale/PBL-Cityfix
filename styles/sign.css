@@ -443,7 +443,7 @@ body {
     #button {
         font-size: 0.9rem;
         max-width: 180px;
-    }
+    } 
 }
 
 @media (max-width: 480px) {
