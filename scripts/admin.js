@@ -98,6 +98,22 @@ function getlocationFromString(locationString) {
         alert("Invalid location format");
     }
 };
+function openImageInNewTab(base64Data) {
+    const newTab = window.open();
+    if (newTab) {
+        newTab.document.write(`
+            <html>
+                <head><title>Image Preview</title></head>
+                <body style="margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f0f0;">
+                    <img src="${base64Data}" alt="Complaint Image" style="max-width: 100%; max-height: 100%;"/>
+                </body>
+            </html>
+        `);
+        newTab.document.close();
+    } else {
+        alert("Popup blocked! Please allow popups for this site.");
+    }
+}
 
 
 
@@ -109,55 +125,60 @@ function getregproblem() {
     }
 
     let table = `
-          <h2>Registered Complaints</h2>
-          <table border="1" style="width: 100%; border-collapse: collapse; font-family: Arial;overflow-x: scroll;">
-            <tr style="background-color: #333; color: white; overflow-x: scroll; height:40px;">
-              <th style="padding=10px;">Application ID</th>
-              <th style="padding=10px;">Name</th>
-              <th style="padding=10px;">Email</th>
-              <th style="padding=10px;">Mobile No</th>
-              <th style="padding=10px;">Category</th>
-              <th style="padding=10px;">Department</th>
-              <th style="padding=10px;">Area</th>
-              <th style="padding=10px;">Location</th>
-              <th style="padding=10px;">Pincode</th>
-              <th style="padding=10px;">Description</th>
-              <th style="padding=10px;" >Status</th>
+        <h2>Registered Complaints</h2>
+        <table border="1" style="width: 100%; border-collapse: collapse; font-family: Arial; overflow-x: scroll;">
+            <tr style="background-color: #333; color: white; height: 40px; overflow-x: scroll;">
+                <th style="padding: 10px;">Application ID</th>
+                <th style="padding: 10px;">Name</th>
+                <th style="padding: 10px;">Email</th>
+                <th style="padding: 10px;">Mobile No</th>
+                <th style="padding: 10px;">Category</th>
+                <th style="padding: 10px;">Department</th>
+                <th style="padding: 10px;">Area</th>
+                <th style="padding: 10px;">Location</th>
+                <th style="padding: 10px;">Pincode</th>
+                <th style="padding: 10px;">Description</th>
+                <th style="padding: 10px;">Status</th>
+                <th style="padding: 10px;">Image</th> <!-- 👈 New image column -->
             </tr>
-        `;
+    `;
 
+    Complaints.forEach((c, index) => {
+        let statusColor = "";
+        if (c.status === "Solved") {
+            statusColor = "green";
+        } else if (c.status === "Rejected") {
+            statusColor = "red";
+        } else {
+            statusColor = "orange"; // Pending
+        }
 
-
-
-        Complaints.forEach((c, index) => {
-            let statusColor = "";
-            if (c.status === "Solved") {
-                statusColor = "green";
-            } else if (c.status === "Rejected") {
-                statusColor = "red";
-            } else {
-                statusColor = "orange"; // Default to Pending
-            }
         table += `
-            <tr overflow-x: scroll;>
-              <td style="padding: 10px; border: 1px solid #ccc;">${c.applicationID}</td>
-              <td style="padding: 10px; border: 1px solid #ccc;">${c.name}</td>
-              <td style="padding: 10px; border: 1px solid #ccc;">${c.email}</td>
-              <td style="padding: 10px; border: 1px solid #ccc;">${c.mobile}</td>
-              <td style="padding: 10px; border: 1px solid #ccc;">${c.category}</td>
-              <td style="padding: 10px; border: 1px solid #ccc;">${c.department}</td>
-              <td style="padding: 10px; border: 1px solid #ccc;">${c.area}</td>   
-             <td style="padding: 10px; border: 1px solid #ccc;">
+            <tr style="overflow-x:scroll;">
+                <td style="padding: 10px; border: 1px solid #ccc;">${c.applicationID}</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">${c.name}</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">${c.email}</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">${c.mobile}</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">${c.category}</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">${c.department}</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">${c.area}</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">
                     ${typeof c.location === "string" && c.location.includes("Lat:")
                 ? `<a href="#" onclick='event.preventDefault(); getlocationFromString(${JSON.stringify(c.location)})'>${c.location}</a>`
                 : (c.location || "N/A")
             }
-                                                                            </td>
-              <td style="padding: 10px; border: 1px solid #ccc;">${c.pincode}</td>
-              <td style="padding: 10px; border: 1px solid #ccc;">${c.description}</td>
-              <td style="padding: 10px; border: 1px solid #ccc; color:red";>${c.status}</td>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc;">${c.pincode}</td>
+                <td style="padding: 10px; border: 1px solid #ccc;">${c.description}</td>
+                <td style="padding: 10px; border: 1px solid #ccc; color: ${statusColor};">${c.status}</td>
+                <td>
+                     <img src="${c.image}" alt="Complaint Image" style="width: 100px; height: auto; cursor: pointer;"
+                            onclick="openImageInNewTab('${c.image}')" />
+                </td>
+                   
+
             </tr>
-          `;
+        `;
     });
 
     table += `</table>`;

@@ -118,6 +118,7 @@ body {
     grid-area: main-content;
     padding: 20px;
     background: #f9f9f9;
+    overflow-x: scroll;
     
     position: relative;
     z-index: 1;

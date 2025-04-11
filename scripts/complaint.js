@@ -16,6 +16,14 @@ document.getElementById("submit").addEventListener("click", function (event) {
     let description = document.getElementById("prob").value;
     let fileInput = document.getElementById("upload");
     
+    if (
+        !name || !mobile || !email || !area || !pincode ||
+        !category || !department || !location || !description ||
+        fileInput.files.length === 0
+    ) {
+        alert("Please fill in all the details and upload an image.");
+        return;
+    }
     // Generate Unique Application ID
     let applicationID = "CF" + Date.now();
     
@@ -33,6 +41,7 @@ document.getElementById("submit").addEventListener("click", function (event) {
         saveComplaint();
     }
     
+    
     function saveComplaint() {
         let complaintData = {
             applicationID: applicationID,
@@ -48,7 +57,7 @@ document.getElementById("submit").addEventListener("click", function (event) {
             image: imageData,
             status: "Pending"
         };
-
+        
         // Get existing complaints from localStorage
         let complaints = JSON.parse(localStorage.getItem("complaints")) || [];
         complaints.push(complaintData);
@@ -56,10 +65,11 @@ document.getElementById("submit").addEventListener("click", function (event) {
 
         window.location.href="appid.html";
 
-
+ 
        
         document.querySelector("form").reset();
     }
+    reader.readAsDataURL(fileInput.files[0]);
 });
 
 // Auto-Select Department Based on Category
@@ -92,6 +102,8 @@ document.getElementById("cat").addEventListener("change", function () {
         departmentField.value = "";
     }
 });
+
+
 
 // Auto-Fetch Location on Click
 document.getElementById("location").addEventListener("click", function () {
@@ -128,8 +140,8 @@ document.getElementById("location").addEventListener("click", function () {
 });
 
 // Redirect to Home Page After Submission
-document.getElementById("submit").addEventListener("click", function (event) {
-    event.preventDefault();
+// document.getElementById("submit").addEventListener("click", function (event) {
+//     event.preventDefault();
     
-    window.location.href = "appid.html";
-});
+//     window.location.href = "appid.html";
+// });

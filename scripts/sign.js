@@ -19,7 +19,7 @@ document.getElementById("button").addEventListener("click", function (e) {
         let users = JSON.parse(localStorage.getItem("users")) || [];
     
     let newUser = {
-        name: name,
+        name: name, 
         email: email,
         phone: phone,
         password: password

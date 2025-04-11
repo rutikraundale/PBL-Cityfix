@@ -750,12 +750,12 @@ body {
     align-items: center;
 }
 .container {
-    width: 50%;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
 }
 .container textarea{
     width: 100%;
