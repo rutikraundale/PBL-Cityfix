@@ -81,7 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 logoutBtn.style.display = "block";
                 logoutBtn.addEventListener("click", function () {
                     localStorage.removeItem("loggedInUser");
-                    location.reload();
+                    window.location.href="home.html";
+                    
                 });
             } else {
                 console.error("logoutBtn not found in DOM");

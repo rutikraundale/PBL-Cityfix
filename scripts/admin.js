@@ -277,8 +277,8 @@ function updateTextareaColor(index) {
 
 function getfeedback() {
 
-    let feedback = JSON.parse(localStorage.getItem("feedback")) || []
-    if (feedback.length === 0) {
+    let feedbacknew = JSON.parse(localStorage.getItem("feedbacknew")) || []
+    if (feedbacknew.length === 0) {
         return `
         <h2>No Feedback Submitted Yet!</h2>
     `
@@ -291,16 +291,18 @@ function getfeedback() {
         <tr  style="background-color: #333; color: white;overflow-x: scroll;">
         <th style="padding: 10px;">Name</th>
         <th style="padding: 10px;">Email ID</th>
+        <th style="padding: 10px;">Type</th>
         <th style="padding: 10px;">Feedback</th>
         
         </tr>
         
     `;
-    feedback.forEach(c => {
+    feedbacknew.forEach(c => {
         table += `
             <tr>
             <td style="padding: 10px; border: 1px solid #ccc;" >${c.name}</td>
             <td style="padding: 10px; border: 1px solid #ccc;">${c.email}</td>
+            <td style="padding: 10px; border: 1px solid #ccc;">${c.type}</td>
             <td style="padding: 10px; border: 1px solid #ccc;">${c.message}</td>
             </tr>
         `;
