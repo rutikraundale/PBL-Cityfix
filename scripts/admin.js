@@ -24,16 +24,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 function loadcontent(section) {
     const content = {
-        problems: getregproblem(),
-        analytics: getanalytics(),
-        adminC: getadmincontrol(),
-        feedback: getfeedback(),
+        problems: getregproblem,
+        analytics: getanalytics,
+        adminC: getadmincontrol,
+        feedback: getfeedback,
+
     };
 
-    document.getElementById("main-content").innerHTML = content[section] || `
+
+    document.getElementById("main-content").innerHTML = content[section]?.() || `
     <h2>Welcome to administration page</h2>
     <p>Select the option from the menu</p>
 `;
+
     if (section === 'analytics') setTimeout(initChart, 100);
 
 }
@@ -311,4 +314,67 @@ function getfeedback() {
     });
     table += `</table>`
     return table;
+}
+function toggleDropdown(parentLi, event) {
+    event.stopPropagation(); // Stop event from bubbling to the parent <li>
+    const sublist = parentLi.querySelector('.sub-list'); // Find the sublist <ul> under the clicked <li>
+    if (sublist) {
+        sublist.classList.toggle('active'); // Toggle visibility of the sublist
+    }
+}
+
+
+
+function toggleDropdown(span) {
+    const dropdown = span.parentElement;
+    dropdown.classList.toggle("open");
+}
+
+
+function loadDepartmentContent(departmentName) {
+    // Filter complaints by department
+    const complaints = JSON.parse(localStorage.getItem("complaints")) || [];
+    const filtered = complaints.filter(c => c.department === departmentName);
+
+    let html = `<h2>${departmentName} Complaints</h2>`;
+
+    if (filtered.length === 0) {
+        html += `<p>No complaints registered under this department.</p>`;
+    } else {
+        html += `
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <th>Application ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Category</th>
+                    <th>Area</th>
+                    <th>Pincode</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+        `;
+
+        filtered.forEach(c => {
+            let statusColor = c.status === "Solved" ? "green" : c.status === "Rejected" ? "red" : "orange";
+            html += `
+                <tr>
+                    <td>${c.applicationID}</td>
+                    <td>${c.name}</td>
+                    <td>${c.email}</td>
+                    <td>${c.mobile}</td>
+                    <td>${c.category}</td>
+                    <td>${c.area}</td>
+                    <td>${c.pincode}</td>
+                    <td>${c.description}</td>
+                    <td style="color:${statusColor}">${c.status}</td>
+                </tr>
+            `;
+        });
+
+        html += `</table>`;
+    }
+
+    document.getElementById("main-content").innerHTML = html;
 }

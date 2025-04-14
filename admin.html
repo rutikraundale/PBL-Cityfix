@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cityfix-Admin</title>
     <link rel="stylesheet" href="./styles/admin.css">
+    <link rel="shortcut icon" href="./images/cropedlogo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
-<body>
+<body> 
    
 
     <div class="container">
@@ -29,10 +30,27 @@
         </div>
         <div class="sidepanel">
             <ul>
-                <li onclick="loadcontent('problems')">Problem Registered</li>
+                <li class="dropdown">
+                    <span onclick="toggleDropdown(this)">
+                        Problem Registered <span class="arrow">▼</span>
+                    </span>
+                    <ul class="submenu">
+                        <li onclick="loadDepartmentContent('Police Department')">Police Department</li>
+                        <li onclick="loadDepartmentContent('Cyber Crime Department')">Cyber Crime Department</li>
+                        <li onclick="loadDepartmentContent('Municipal Corporation (MNC)')">Municipal Corporation (MNC)</li>
+                        <li onclick="loadDepartmentContent('Water Supply Department')">Water Supply Department</li>
+                        <li onclick="loadDepartmentContent('Electricity Board')">Electricity Board</li>
+                        <li onclick="loadDepartmentContent('Animal Welfare Board')">Animal Welfare Board</li>
+                    </ul>
+                   
+
+                   
+                </li>
                 <li onclick="loadcontent('analytics')">Analytics</li>
-                <li onclick="loadcontent('adminC')">Admin Controls</li>
+                <li onclick="loadcontent('adminC')">Admin Control</li>
+
                 <li onclick="loadcontent('feedback')">Feedbacks</li>
+                <!-- <li onclick="loadcontent('police')">police</li> -->
             </ul>
            
         </div>

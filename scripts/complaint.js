@@ -79,20 +79,20 @@ document.getElementById("cat").addEventListener("change", function () {
 
     // Mapping categories to departments
     let departmentMapping = {
-        "sewage": "Municipal Corporation (MNC)",
-        "circuit": "Electricity Board",
-        "Pipe": "Water Supply Department",
-        "Garbage": "Municipal Corporation (MNC)",
-        "drug": "Police Department",
-        "suspicios": "Police Department",
-        "disturb": "Police Department",
-        "animal": "Animal Welfare Board",
-        "theft": "Police Department",
-        "riot": "Police Department",
-        "mob": "Police Department",
-        "abuse": "Animal Welfare Board",
-        "crime": "Cyber Crime Department",
-        "threats": "Cyber Crime Department"
+        "Drainage/Sewage Overflow": "Municipal Corporation (MNC)",
+        "Short Circuit on Pole": "Electricity Board",
+        "Water Leakage in Pipeline": "Water Supply Department",
+        "Garbage Leftover": "Municipal Corporation (MNC)",
+        "Illegal Activities": "Police Department",
+        "Suspicious Activities": "Police Department", 
+        "Public Disturbance": "Police Department",
+        "Animal Torture": "Animal Welfare Board",
+        "Theft": "Police Department",
+        "Pre-Riot Info": "Police Department",
+        "Mob Gathering": "Police Department",
+        "Cybercrime (Fraud/Scam)": "Animal Welfare Board",
+        "Online/Mobile threats": "Cyber Crime Department",
+        
     };
 
     // Set department based on category

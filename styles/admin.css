@@ -135,3 +135,46 @@ canvas {
     top: 0;
   }
   
+  .sidepanel ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidepanel ul li {
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial;
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    margin-left: 20px;
+    list-style-type: none;
+    padding-left: 10px;
+    background-color: #222;
+    color: white;
+    font-size: small;
+   
+}
+.submenu li:hover{
+    background-color: #fffdfd;
+    color: black;
+    border-radius: 15px;
+
+}
+.dropdown.open .submenu {
+    display: block;
+}
+
+.arrow {
+    float: right;
+    transition: transform 0.3s ease;
+}
+.arrow:hover{
+   color: red;
+}
+.dropdown.open .arrow {
+    transform: rotate(180deg); /* changes ▼ to ▲ */
+}
+
