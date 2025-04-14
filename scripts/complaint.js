@@ -139,9 +139,11 @@ document.getElementById("location").addEventListener("click", function () {
     }
 });
 
-// Redirect to Home Page After Submission
-// document.getElementById("submit").addEventListener("click", function (event) {
-//     event.preventDefault();
-    
-//     window.location.href = "appid.html";
-// });
+document.addEventListener("DOMContentLoaded", function () {
+    let user = JSON.parse(localStorage.getItem("loggedInUser")); // Parse the user object
+    if (!user || !user.name) {  // Check if user exists and has a name
+        alert("Please log in to register complaint.");
+        window.location.href = "login.html";
+        return;
+    }
+});
