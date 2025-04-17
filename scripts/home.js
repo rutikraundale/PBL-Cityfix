@@ -97,9 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("User NOT logged in");
         }
     });
-    function showSuggestions() {
-        document.getElementById("suggestionsList").style.display = "block";
-    }
+    
     
     function filterSuggestions() {
         let input = document.getElementById("query").value.toLowerCase();

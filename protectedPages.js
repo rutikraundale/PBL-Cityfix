@@ -1,5 +1,4 @@
-import { auth } from "./firebaseConfig.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const protectedPages = ["complaint.html", "application.html", "disc.html", "analytics.html"];
