@@ -109,35 +109,49 @@ document.getElementById("cat").addEventListener("change", function () {
 document.getElementById("location").addEventListener("click", function () {
     let locationInput = document.getElementById("location");
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            function (position) {
-                let latitude = position.coords.latitude;
-                let longitude = position.coords.longitude;
-                locationInput.value = `Lat: ${latitude}, Long: ${longitude}`;
-                locationInput.setAttribute("data-maps", `https://www.google.com/maps?q=${latitude},${longitude}`);
-                locationInput.style.cursor = "pointer";
-                
-                // Double-click se Google Maps open hoga
-                locationInput.addEventListener("dblclick", function () {
-                    window.open(locationInput.getAttribute("data-maps"), "_blank");
-                });
+    // Only fetch location if field is not already filled
+    if (!locationInput.value) {
+        locationInput.value = "Fetching location...";
+        locationInput.readOnly = true;
 
-                // Disable manual input if location is fetched
-                locationInput.readOnly = true;
-            },
-            function (error) {
-                alert("Location access denied! Manually enter location.");
-                locationInput.placeholder = "Enter your location manually";
-                locationInput.readOnly = false; // Enable manual input
-            }
-        );
-    } else {
-        alert("Geolocation is not supported by this browser.");
-        locationInput.placeholder = "Enter your location manually";
-        locationInput.readOnly = false; // Enable manual input
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    let latitude = position.coords.latitude;
+                    let longitude = position.coords.longitude;
+                    locationInput.value = `Lat: ${latitude}, Long: ${longitude}`;
+                    locationInput.setAttribute("data-maps", `https://www.google.com/maps?q=${latitude},${longitude}`);
+                    locationInput.style.cursor = "pointer";
+
+                    // Prevent multiple double-click bindings
+                    if (!locationInput.dataset.dblclickAdded) {
+                        locationInput.addEventListener("dblclick", function () {
+                            window.open(locationInput.getAttribute("data-maps"), "_blank");
+                        });
+                        locationInput.dataset.dblclickAdded = "true";
+                    }
+
+                    locationInput.readOnly = true;
+                },
+                function (error) {
+                    // Access denied or error
+                    alert("Location access denied! You can enter your location manually.");
+                    locationInput.value = "";
+                    locationInput.placeholder = "Enter your location manually";
+                    locationInput.readOnly = false;
+                    locationInput.style.cursor = "text";
+                }
+            );
+        } else {
+            alert("Geolocation is not supported by this browser.");
+            locationInput.value = "";
+            locationInput.placeholder = "Enter your location manually";
+            locationInput.readOnly = false;
+            locationInput.style.cursor = "text";
+        }
     }
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let user = JSON.parse(localStorage.getItem("loggedInUser")); // Parse the user object

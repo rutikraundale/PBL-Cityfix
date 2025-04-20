@@ -155,7 +155,14 @@ canvas {
     background-color: #222;
     color: white;
     font-size: small;
-   
+    border-radius: 15px;
+}
+.submenu li{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-top: 5px;
+    height: 45px;
 }
 .submenu li:hover{
     background-color: #fffdfd;
@@ -178,3 +185,10 @@ canvas {
     transform: rotate(180deg); /* changes ▼ to ▲ */
 }
 
+#admin-line{
+    color: black;
+    border: solid black 1px;
+    width: 500px;
+    position: relative;
+    bottom: 8px;
+}

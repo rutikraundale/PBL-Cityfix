@@ -353,6 +353,7 @@ function loadDepartmentContent(departmentName) {
                     <th>Pincode</th>
                     <th>Description</th>
                     <th>Status</th>
+                    <th style="padding: 10px;">Image</th> <!-- 👈 New image column -->
                 </tr>
         `;
 
@@ -369,6 +370,10 @@ function loadDepartmentContent(departmentName) {
                     <td>${c.pincode}</td>
                     <td>${c.description}</td>
                     <td style="color:${statusColor}">${c.status}</td>
+                    <td>
+                     <img src="${c.image}" alt="Complaint Image" style="width: 100px; height: auto; cursor: pointer;"
+                            onclick="openImageInNewTab('${c.image}')" />
+                    </td>
                 </tr>
             `;
         });
