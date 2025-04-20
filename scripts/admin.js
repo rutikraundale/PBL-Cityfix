@@ -352,6 +352,7 @@ function loadDepartmentContent(departmentName) {
                     <th>Area</th>
                     <th>Pincode</th>
                     <th>Description</th>
+                    <th style="padding: 10px;">Location</th>
                     <th>Status</th>
                     <th style="padding: 10px;">Image</th> <!-- 👈 New image column -->
                 </tr>
@@ -369,11 +370,18 @@ function loadDepartmentContent(departmentName) {
                     <td>${c.area}</td>
                     <td>${c.pincode}</td>
                     <td>${c.description}</td>
+                    <td style="padding: 10px; border: 1px solid #ccc;">
+                    ${typeof c.location === "string" && c.location.includes("Lat:")
+                    ? `<a href="#" onclick='event.preventDefault(); getlocationFromString(${JSON.stringify(c.location)})'>${c.location}</a>`
+                    : (c.location || "N/A")
+                }
+                </td>
                     <td style="color:${statusColor}">${c.status}</td>
                     <td>
                      <img src="${c.image}" alt="Complaint Image" style="width: 100px; height: auto; cursor: pointer;"
                             onclick="openImageInNewTab('${c.image}')" />
                     </td>
+
                 </tr>
             `;
         });
