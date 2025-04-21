@@ -428,7 +428,7 @@ td {
     width: 90%; /* Instead of a fixed width, use a percentage */
     max-width: 600px; /* Ensures it doesn't get too large on big screens */
     height: auto;
-    background: rgb(245, 240, 240);
+    background: rgb(255, 255, 255);
     padding: 30px;
     border-radius: 20px;
     gap: 20px;
@@ -438,11 +438,18 @@ td {
 /* Styling for paragraph text */
 .box p {
     font-style: italic;
+    font-weight: bold;
     font-size: 22px;
     text-align: center;
     margin-bottom: 10px;
 }
-
+#hr-line{
+    width: 300px;
+    color: black;
+    border:solid black 1px;
+    position: relative;
+    bottom: 20px;
+}
 /* Styling for labels */
 .box label {
     font-size: 18px;
@@ -458,12 +465,14 @@ td {
     border-radius: 20px;
     height: 30px;
     padding: 5px;
+    margin: 20px;
     text-align: center;
 }
 
 /* Placeholder styling */
 .box input::placeholder {
     text-align: center;
+    color: black;
 }
 
 /* Button styling */
@@ -475,7 +484,7 @@ td {
     border-radius: 10px;
     border: none;
     color: white;
-    background: #6183b7;
+    background: #2974e5;
     cursor: pointer;
     font-size: 16px;
     transition: background 0.3s;
