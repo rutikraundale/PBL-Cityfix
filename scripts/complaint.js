@@ -92,7 +92,7 @@ document.getElementById("cat").addEventListener("change", function () {
         "Mob Gathering": "Police Department",
         "Cybercrime (Fraud/Scam)": "Animal Welfare Board",
         "Online/Mobile threats": "Cyber Crime Department",
-        
+        "Road Pothole":"Municipal Corporation (MNC)",
     };
 
     // Set department based on category
