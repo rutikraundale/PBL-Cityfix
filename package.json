@@ -1,0 +1,24 @@
+{
+  "name": "pbl",
+  "version": "1.0.0",
+  "description": "Cityfix urban challenges",
+  "main": "protectedPages.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rutikraundale/PBL-Cityfix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rutikraundale/PBL-Cityfix/issues"
+  },
+  "homepage": "https://github.com/rutikraundale/PBL-Cityfix#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
