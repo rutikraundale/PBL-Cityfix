@@ -428,34 +428,122 @@ textarea.form-control {
 
 
 /* **************************************** */
-/* Footer logos */
-.footer-logo {
-  width: 90px;
-  height: auto;
+.footer-simple {
+  background: #050608;                /* dark footer bg */
 }
 
-/* LinkedIn link style for dark theme footer */
-.linkedin-link {
-  display: inline-flex;
-  align-items: center;
+/* Footer links */
+.footer-link-simple {
+  color: var(--text-muted);
   font-size: 0.9rem;
-  font-weight: 500;
-  color: #7ab8ff; /* softer LinkedIn-ish blue that fits dark theme */
-  font-style: italic;
-  transition: color 0.25s ease;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.linkedin-link i {
-  font-size: 1.1rem;
-  transition: color 0.25s ease, transform 0.15s ease;
+.footer-link-simple:hover {
+  color: var(--accent);
+}
+
+/* LinkedIn style (you already have something similar, can reuse) */
+.linkedin-link {
+  color: #0a66c2;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .linkedin-link:hover {
-  color: var(--text-primary);
-  text-decoration: none;
+  color: var(--accent);
 }
 
-.linkedin-link:hover i {
+
+/* feedback form css */
+/* Card-like background for sections */
+.surface {
+  background: var(--surface);
+  border-radius: 1rem;
+}
+
+/* If not already defined: */
+.text-primary-custom {
+  color: var(--text-primary);
+}
+
+.text-muted-custom {
+  color: var(--text-muted);
+}
+
+/* FAQ CSS */
+/* Make accordion match dark / surface style */
+.accordion-item.surface {
+  background: var(--surface);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.accordion-button {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.02);
   color: var(--accent);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  font-size: 0.95rem;
+}
+/* Contact CSS */
+.surface {
+  background: var(--surface);
+  border-radius: 1rem;
+}
+
+#clink.pill {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(88, 101, 242, 0.14);
+  color: var(--accent);
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#clink.pill:hover {
+  background: rgba(88, 101, 242, 0.24);
   transform: translateY(-1px);
+  text-decoration: none;
+}
+/* login css// */
+
+.bg-dark-soft {
+  background: rgba(23, 23, 23, 0.85);
+}
+
+.border-subtle {
+  border: 1px solid var(--border-subtle);
+}
+
+.input-group-text.bg-dark-soft {
+  border: 1px solid var(--border-subtle);
+}
+
+.input-group-text i {
+  color: var(--text-muted);
+}
+
+.form-control.bg-dark-soft {
+  color: var(--text-primary);
+}
+
+.form-control.bg-dark-soft::placeholder {
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
