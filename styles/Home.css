@@ -547,3 +547,333 @@ textarea.form-control {
   color: var(--text-muted);
   font-size: 0.9rem;
 }
+/* SIGN IN */
+.bg-dark-soft {
+  background: rgba(23, 23, 23, 0.85);
+}
+
+.border-subtle {
+  border: 1px solid var(--border-subtle);
+}
+
+.form-control.bg-dark-soft {
+  color: var(--text-primary);
+}
+
+.form-control.bg-dark-soft::placeholder {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Related Links */
+/* Card style for related links */
+.link-card {
+  position: relative;
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  margin-bottom: 0.75rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease,
+              background 0.15s ease;
+}
+
+.link-card a {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+
+.link-card p {
+  font-size: 0.9rem;
+}
+
+/* Hover effect */
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.6);
+  border-color: var(--accent-soft);
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+/* Back button (reuse from policy page if already added) */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-subtle);
+  color: var(--accent);
+  background: transparent;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.back-btn:hover {
+  background: rgba(148, 163, 184, 0.12);
+  border-color: var(--accent-soft);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* ANALYTICS */
+/* Analytics Chart Wrapper */
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 260px;
+  max-height: 420px;
+}
+
+/* Make the canvas fill the wrapper */
+.chart-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* APPLICATION STATUS */
+.app-id-card {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 20px 24px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #0f172a, #020617);
+  border: 1px solid #1f2933;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  color: #e5e7eb;
+}
+
+.app-id-card #apid {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+#appIdText {
+  font-weight: 600;
+  color: #38bdf8;  /* accent cyan */
+}
+
+#goback {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  background: radial-gradient(circle at top left, #38bdf8, #1d4ed8);
+  color: #f9fafb;
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+#goback:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(56, 189, 248, 0.45);
+  opacity: 0.95;
+}
+
+#goback:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.6);
+}
+
+/* optional: make it adapt on small screens */
+@media (max-width: 480px) {
+  .app-id-card {
+    margin: 24px 12px;
+    padding: 16px 18px;
+  }
+
+  .app-id-card #apid {
+    font-size: 1rem;
+  }
+}
+
+/* DISCUSSION BOARD CSS */
+/* Page title */
+#diss-head {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 2rem;
+  color: #e5e7eb;
+}
+
+/* Main container */
+.discussion-container {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #020617, #0b1220);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  color: #e5e7eb;
+}
+
+.discussion-container h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+}
+
+/* New comment area */
+.new-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+#commentInput {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+  resize: vertical;
+}
+
+#commentInput::placeholder {
+  color: #6b7280;
+}
+
+#postComment {
+  align-self: flex-end;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: radial-gradient(circle at top left, #38bdf8, #1d4ed8);
+  color: #f9fafb;
+  font-weight: 500;
+  box-shadow: 0 10px 24px rgba(56, 189, 248, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+#postComment:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(56, 189, 248, 0.45);
+  opacity: 0.95;
+}
+
+#postComment:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Individual comment */
+.comment {
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid #1f2937;
+  margin-bottom: 14px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.comment-user {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.comment-date {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.comment-text {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Like / reply bar */
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.action-btn {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  font-size: 0.85rem;
+}
+
+.action-btn:hover {
+  color: #e5e7eb;
+}
+
+/* Replies */
+.replies {
+  margin-top: 6px;
+  padding-left: 12px;
+  border-left: 2px solid #1f2937;
+}
+
+.reply-item {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.reply-input {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 6px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+  resize: vertical;
+}
+
+.reply-btn {
+  margin-top: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #1f2937;
+  color: #e5e7eb;
+  font-size: 0.8rem;
+}
+
+.reply-btn:hover {
+  background: #111827;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .discussion-container {
+    margin: 16px 10px 30px;
+    padding: 16px;
+  }
+
+  #diss-head {
+    font-size: 1.6rem;
+  }
+}

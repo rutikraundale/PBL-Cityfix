@@ -1,58 +1,143 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let user = JSON.parse(localStorage.getItem("loggedInUser")); // Parse the user object
-    if (!user || !user.name) {  // Check if user exists and has a name
-        alert("Please log in to access the discussion board.");
-        window.location.href = "login.html";
-        return;
-    }
+  // 🔒 Require login
+  const user = JSON.parse(localStorage.getItem("loggedInUser"));
+  if (!user || !user.name) {
+    alert("Please log in to access the discussion board.");
+    window.location.href = "login.html";
+    return;
+  }
 
-    let comments = JSON.parse(localStorage.getItem("comments")) || [];
-    let commentsList = document.getElementById("commentsList");
+  const commentsList = document.getElementById("commentsList");
+  const commentInputEl = document.getElementById("commentInput");
+  const postCommentBtn = document.getElementById("postComment");
 
-    function displayComments() {
-        commentsList.innerHTML = "";
-        comments.forEach((comment, index) => {
-            comment.replies = comment.replies || [];
+  let comments = JSON.parse(localStorage.getItem("comments")) || [];
 
-            let commentDiv = document.createElement("div");
-            commentDiv.classList.add("comment");
-            commentDiv.innerHTML = `
-                <p><strong>${comment.user}</strong></p>
-                <p>${comment.text}</p>
-                
-                <div class="replies">
-                    ${comment.replies.map(reply => `<p><strong>${reply.user}:</strong> ${reply.text}</p>`).join("")}
-                </div>
-                <textarea class="replyInput" placeholder="Write a reply..."></textarea>
-                <button onclick="postReply(${index})">Post Reply</button>
-            `;
-            commentsList.appendChild(commentDiv);
-        });
-    }
+  function saveComments() {
+    localStorage.setItem("comments", JSON.stringify(comments));
+  }
 
-    document.getElementById("postComment").addEventListener("click", function () {
-        let commentInput = document.getElementById("commentInput").value.trim();
-        if (commentInput === "") {
-            alert("Comment cannot be empty!");
-            return;
-        }
-        comments.push({ user: user.name, text: commentInput, replies: [] }); // Use only user.name
-        localStorage.setItem("comments", JSON.stringify(comments));
-        document.getElementById("commentInput").value = "";
-        displayComments();
+  function formatDate(timestamp) {
+    const d = new Date(timestamp);
+    return d.toLocaleString(); // you can customize if you want
+  }
+
+  function displayComments() {
+    commentsList.innerHTML = "";
+
+    comments.forEach((comment, index) => {
+      // ensure structure
+      comment.replies = comment.replies || [];
+      comment.likes = comment.likes || 0;
+      comment.dislikes = comment.dislikes || 0;
+      comment.timestamp = comment.timestamp || Date.now();
+
+      const commentDiv = document.createElement("div");
+      commentDiv.classList.add("comment");
+
+      commentDiv.innerHTML = `
+        <div class="comment-header">
+          <span class="comment-user">${comment.user}</span>
+          <span class="comment-date">${formatDate(comment.timestamp)}</span>
+        </div>
+        <div class="comment-text">
+          ${comment.text}
+        </div>
+        <div class="comment-actions">
+          <button class="action-btn like-btn" data-index="${index}">
+            👍 <span>${comment.likes}</span>
+          </button>
+          <button class="action-btn dislike-btn" data-index="${index}">
+            👎 <span>${comment.dislikes}</span>
+          </button>
+        </div>
+        <div class="replies">
+          ${comment.replies
+            .map(
+              reply =>
+                `<div class="reply-item"><strong>${reply.user}:</strong> ${reply.text}</div>`
+            )
+            .join("")}
+        </div>
+        <textarea class="reply-input" placeholder="Write a reply..."></textarea>
+        <button class="reply-btn" data-index="${index}">Post Reply</button>
+      `;
+
+      commentsList.appendChild(commentDiv);
     });
 
-    window.postReply = function (index) {
-        let replyInput = document.querySelectorAll(".replyInput")[index].value.trim();
-        if (replyInput === "") {
-            alert("Reply cannot be empty!");
-            return;
-        }
-        comments[index].replies = comments[index].replies || [];
-        comments[index].replies.push({ user: user.name, text: replyInput }); // Use only user.name
-        localStorage.setItem("comments", JSON.stringify(comments));
-        displayComments();
-    };
+    attachInnerHandlers();
+  }
 
-    displayComments();
+  function attachInnerHandlers() {
+    // Like buttons
+    document.querySelectorAll(".like-btn").forEach(btn => {
+      btn.onclick = function () {
+        const idx = parseInt(this.dataset.index, 10);
+        comments[idx].likes = (comments[idx].likes || 0) + 1;
+        saveComments();
+        displayComments();
+      };
+    });
+
+    // Dislike buttons
+    document.querySelectorAll(".dislike-btn").forEach(btn => {
+      btn.onclick = function () {
+        const idx = parseInt(this.dataset.index, 10);
+        comments[idx].dislikes = (comments[idx].dislikes || 0) + 1;
+        saveComments();
+        displayComments();
+      };
+    });
+
+    // Reply buttons
+    document.querySelectorAll(".reply-btn").forEach(btn => {
+      btn.onclick = function () {
+        const idx = parseInt(this.dataset.index, 10);
+        const replyInputs = document.querySelectorAll(".reply-input");
+        const replyText = replyInputs[idx].value.trim();
+
+        if (!replyText) {
+          alert("Reply cannot be empty!");
+          return;
+        }
+
+        comments[idx].replies = comments[idx].replies || [];
+        comments[idx].replies.push({
+          user: user.name,
+          text: replyText
+        });
+
+        saveComments();
+        displayComments();
+      };
+    });
+  }
+
+  // Post new comment
+  if (postCommentBtn) {
+    postCommentBtn.addEventListener("click", function () {
+      const text = commentInputEl.value.trim();
+      if (!text) {
+        alert("Comment cannot be empty!");
+        return;
+      }
+
+      comments.push({
+        user: user.name,
+        text: text,
+        replies: [],
+        likes: 0,
+        dislikes: 0,
+        timestamp: Date.now()
+      });
+
+      saveComments();
+      commentInputEl.value = "";
+      displayComments();
+    });
+  }
+
+  // Initial render
+  displayComments();
 });

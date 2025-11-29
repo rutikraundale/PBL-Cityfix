@@ -5,38 +5,62 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cityfix-Website Policy</title>
-    <link rel="stylesheet" href="./styles/webpolicy.css">
+    <title>CityFix-Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./styles/Home.css">
     <link rel="shortcut icon" href="./images/cropedlogo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/14839cd535.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
-    
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="d-flex align-items-center gap-2 text-muted-custom small">
+        <a href="feedback.html" class="text-decoration-none text-primary-custom">
+            Feedback
+        </a>
 
-    <div class="navlink">
-        <a href="feedback.html">Feedback</a>
-        <hr id="vertiline">
-        <a href="faq.html">FAQs</a>
+        <!-- vertical rule on sm and up -->
+        <div class="vr d-none d-sm-block" style="border-color: var(--border-subtle); opacity: .8;"></div>
 
+        <!-- horizontal rule on xs -->
+        <div class="w-100 d-block d-sm-none my-1">
+            <div class="divider"></div>
+        </div>
+
+        <a href="faq.html" class="text-decoration-none text-primary-custom">
+            FAQs
+        </a>
     </div>
-    <nav>
-        <div class="left">
-            <div class="leftbox">
-                <div class="leimg">
-                    <img id="logo" src="./images/logo.png" alt="Logo" width="90">
-                </div>
 
-                <div class="textare">
-                    <p id="city">Cityfix</p>
-                    <p id="Solve">Solving Urban Challenges</p>
+
+    <nav class="navbar navbar-expand-md navbar-dark navbar-cityfix px-3">
+        <div class="container-fluid">
+
+            <!-- Left: Logo + Title -->
+            <div class="d-flex align-items-center gap-2">
+                <img id="logo" src="./images/logo.png" alt="Logo" class="rounded-circle">
+
+                <div class="d-flex flex-column">
+                    <p id="city" class="mb-0 fw-semibold fst-italic text-primary-custom">
+                        Cityfix
+                    </p>
+                    <p id="Solve" class="mb-0 fst-italic text-muted-custom small">
+                        Solving Urban Challenges
+                    </p>
                 </div>
             </div>
-            <div class="rightbox">
-                <form action="#">
-                    <input type="search" id="query" placeholder="Search" onclick="showSuggestions()" oninput="filterSuggestions()">
-                    <ul id="suggestionsList" class="suggestions">
+
+            <!-- Right: Search + Suggestions -->
+            <div class="rightbox ms-md-auto mt-3 mt-md-0">
+                <form action="#" class="position-relative">
+                    <input type="search" id="query" class="form-control" placeholder="Search"
+                        onclick="showSuggestions()" oninput="filterSuggestions()">
+
+                    <ul id="suggestionsList" class="suggestions list-unstyled surface shadow-sm mt-2">
                         <li onclick="selectSuggestion(this)">Register Complaint</li>
                         <li onclick="selectSuggestion(this)">Track Application Status</li>
                         <li onclick="selectSuggestion(this)">Analytics</li>
@@ -44,99 +68,191 @@
                     </ul>
                 </form>
             </div>
-            
-
 
         </div>
     </nav>
 
-    <div class="pagelink">
-        <!-- Hamburger Menu Icon -->
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    
-        <!-- Navigation Links -->
-        <div class="nav" id="navMenu">
-            <a id="a1" href="home.html">Home</a>
-            <a id="a1" href="about.html">About us</a>
-            <a id="a1" href="contact.html">Contact us</a>
-        </div>
-    
-        <!-- Login Button -->
-        
-        
-        <div class="user-info">
-            <span id="usernameDisplay"></span>
-            <button id="logoutBtn" style="display: none;">Logout</button>
-        </div>
-    </div>
-    
 
-    </div>
-    <div class="linemidd">
-        <hr>
 
-    </div>
+    <nav class="navbar navbar-expand-md navbar-dark navbar-cityfix px-3">
+        <div class="container-fluid">
 
-    <div class="container">
-        <h1>CityFix Website Policy</h1>
-    
-        <h2>1. Privacy Policy</h2>
-        <p>We respect your privacy and are committed to protecting your personal data. Information like your name, email, and complaint details are stored locally in your browser and are not shared with any third parties.</p>
-    
-        <h2>2. Data Storage</h2>
-        <p>CityFix uses <strong>local storage</strong> to save user and complaint data. This means your data is only saved in your browser and not uploaded anywhere online. Clearing your browser data will remove your saved complaints.</p>
-    
-        <h2>3. User Responsibilities</h2>
-        <p>Users must provide accurate and appropriate complaint details. Offensive, false, or spammy content in complaints or discussions is discouraged and may be removed by admins.</p>
-    
-        <h2>4. Security Measures</h2>
-        <p>Only registered users can access complaint and discussion features. Please keep your login details secure and do not share them with others.</p>
-    
-        <h2>5. Cookies</h2>
-        <p>CityFix does not use cookies or any tracking technologies.</p>
-    
-        <h2>6. Changes to This Policy</h2>
-        <p>This policy may be updated occasionally to enhance user clarity and experience. Any major changes will be communicated to users.</p>
-    
-        <a href="home.html" class="back-btn">← Back to Home</a>
-      </div>
-    <!-- ************************************* -->
-    <footer>
-        <div class="footer">
-            <div class="Address">
-                <p>Developers:</p>
-    
-                <a href="https://www.linkedin.com/in/rutik-raundale-348136289" class="linkedin-link" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i> Rutik Raundale
-                </a>
-                <a href="https://www.linkedin.com/in/ajinkya-pingal-892383327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    class="linkedin-link" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>Ajinkya Pingal
-                </a>
-                <a href="https://www.linkedin.com/in/devesh-pawar-823492361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin-link" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>Devesh Pawar
-                </a>
-    
-            </div>
-    
-            <div class="lastsec">
-                <ul>
-    
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#">Website Policy</a></li>
-    
+            <!-- Left: fake spacer so nav doesn't stick to very left -->
+            <span class="navbar-text d-none d-md-inline text-faint">
+                <!-- you can leave this empty or put a tiny label -->
+            </span>
+
+            <!-- Toggler (mobile) -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible menu -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <!-- Center-ish: links -->
+                <ul class="navbar-nav mx-auto mb-2 mb-md-0 gap-md-3">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 text-primary-custom" href="home.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 text-primary-custom" href="about.html">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 text-primary-custom" href="contact.html">
+                            Contact us
+                        </a>
+                    </li>
                 </ul>
+
+                <!-- Right: login / user info -->
+                <div class="d-flex align-items-center gap-2 ms-md-3">
+                    <button title="Login" id="loginbtn" class="btn-login-glow btn-sm">
+                        Login/Register
+                    </button>
+
+                    <div class="user-info d-flex align-items-center gap-2">
+                        <span id="usernameDisplay" class="text-muted-custom small"></span>
+                        <button id="logoutBtn" class="btn-ghost btn-sm" style="display: none;">
+                            Logout
+                        </button>
+                    </div>
+                </div>
+
             </div>
-            <div class="leftimg">
-                <img id="img1" src="./images/ashokaa.jpg" alt="ashokhastambh">
-                <img id="img2" src="./images/make.webp" alt="makeinindia">
+        </div>
+    </nav>
+    </div>
+
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="surface p-4 p-md-5 rounded-4">
+
+                    <h1 class="mb-4 text-primary-custom fs-3 fs-md-2">
+                        CityFix Website Policy
+                    </h1>
+
+                    <h2 class="fs-5 text-primary-custom mt-3">
+                        1. Privacy Policy
+                    </h2>
+                    <p class="text-muted-custom">
+                        We respect your privacy and are committed to protecting your personal data. Information like
+                        your name, email,
+                        and complaint details are stored locally in your browser and are not shared with any third
+                        parties.
+                    </p>
+
+                    <h2 class="fs-5 text-primary-custom mt-3">
+                        2. Data Storage
+                    </h2>
+                    <p class="text-muted-custom">
+                        CityFix uses <strong>local storage</strong> to save user and complaint data. This means your
+                        data is only saved
+                        in your browser and not uploaded anywhere online. Clearing your browser data will remove your
+                        saved complaints.
+                    </p>
+
+                    <h2 class="fs-5 text-primary-custom mt-3">
+                        3. User Responsibilities
+                    </h2>
+                    <p class="text-muted-custom">
+                        Users must provide accurate and appropriate complaint details. Offensive, false, or spammy
+                        content in complaints
+                        or discussions is discouraged and may be removed by admins.
+                    </p>
+
+                    <h2 class="fs-5 text-primary-custom mt-3">
+                        4. Security Measures
+                    </h2>
+                    <p class="text-muted-custom">
+                        Only registered users can access complaint and discussion features. Please keep your login
+                        details secure and
+                        do not share them with others.
+                    </p>
+
+                    <h2 class="fs-5 text-primary-custom mt-3">
+                        5. Cookies
+                    </h2>
+                    <p class="text-muted-custom">
+                        CityFix does not use cookies or any tracking technologies.
+                    </p>
+
+                    <h2 class="fs-5 text-primary-custom mt-3">
+                        6. Changes to This Policy
+                    </h2>
+                    <p class="text-muted-custom">
+                        This policy may be updated occasionally to enhance user clarity and experience. Any major
+                        changes will be
+                        communicated to users.
+                    </p>
+
+                    <div class="mt-4">
+                        <a href="home.html" class="back-btn text-decoration-none">
+                            ← Back to Home
+                        </a>
+                    </div>
+
+                </div>
             </div>
-    
+        </div>
+    </section>
+
+    <!-- ************************************* -->
+    <footer class="footer-simple mt-5">
+        <div class="container py-3">
+            <div class="row gy-3 align-items-center">
+
+                <!-- Left: Developer -->
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <p class="mb-1 small text-muted-custom">
+                        Developed by
+                    </p>
+                    <a href="https://www.linkedin.com/in/rutik-raundale-348136289"
+                        class="linkedin-link text-decoration-none" target="_blank">
+                        <i class="fa-brands fa-linkedin me-1"></i>
+                        Rutik Raundale
+                    </a>
+                </div>
+
+                <!-- Center: short project line -->
+                <div class="col-12 col-md-4 text-center">
+                    <p class="mb-1 small text-muted-custom">
+                        © <span id="yearSpan"></span> Cityfix
+                    </p>
+                    <p class="mb-0 small text-muted-custom">
+                        A smart complaint management system.
+                    </p>
+                </div>
+
+                <!-- Right: links -->
+                <div class="col-12 col-md-4">
+                    <ul class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end gap-3 mb-0">
+                        <li>
+                            <a href="feedback.html" class="footer-link-simple">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="footer-link-simple">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="webpolicy.html" class="footer-link-simple">Website Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </footer>
     <script src="./scripts/home.js" defer></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
