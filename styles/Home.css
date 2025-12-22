@@ -877,3 +877,35 @@ textarea.form-control {
     font-size: 1.6rem;
   }
 }
+.imagesec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height:auto;
+ 
+
+}
+.newsec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  
+
+}
+
+#sliderImage{
+  width:100vw;
+  height: 550px;
+  object-fit:cover;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: 10px;
+  padding: auto;
+  
+
+}

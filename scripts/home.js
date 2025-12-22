@@ -6,17 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (sliderImage) {
         const images = [
-            "images/pothhole.png",
-            "images/sewage.jpg",
-            "images/theft.jpg",
-            "images/swach.png",
-            "images/cyber.avif"
+            "images/image1.jpg",
+            "images/img2.jpg",
+            "images/img3.jpg",
+            "images/img4.jpg",
+            "images/img5.jpg"
+            
         ];
         let index = 0;
 
         function slideImages() {
             index = (index + 1) % images.length;
-            sliderImage.style.opacity = 0;
+            sliderImage.style.opacity = 1;
             setTimeout(() => {
                 sliderImage.src = images[index];
                 sliderImage.style.opacity = 1;
